@@ -276,6 +276,18 @@ END
 
 
 // Bodhi/vampires talk
+
+/* prevent this talk to happen later in case Nephele was not in party */
+IF
+    !InParty(Myself)
+    GlobalGT("BodhiAppear","GLOBAL",2)
+    Global("LK#NepheleVampiresTalk","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#NepheleVampiresTalk","GLOBAL",3)
+END
+
+
 IF
     InParty(Myself)
     See(Player1)
@@ -553,6 +565,16 @@ END
 // Other minor talks/comments
 
 // Aran Linvail
+/* prevent dialogue if Nephele was not in party */
+IF
+    !InParty(Myself)
+    Global("AranJob","GLOBAL",1)
+    Global("LK#NepheleAran","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#NepheleAran","GLOBAL",2)
+END
+
 IF
     InParty(Myself)
     See(Player1)
@@ -584,6 +606,17 @@ END
 
 
 // Bodhi escaped
+/* prevent dialogue if Nephele was not in party */
+IF
+    !InParty(Myself)
+    Global("LassalVampires","GLOBAL",3)
+    Global("LK#NepheleBodhi","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#NepheleBodhi","GLOBAL",3)
+END
+
+
 IF
     InParty(Myself)
     See(Player1)
@@ -662,12 +695,27 @@ END
 
 
 // Escaped Underdark
+/* detect whether Nephele was in Underdark at all */
+ IF
+    InParty(Myself)
+    See(Player1)
+    CombatCounter(0)
+    !Detect([ENEMY])
+    AreaCheck("AR2100")
+    Global("LK#NepheleWasInUnderdark","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#NepheleWasInUnderdark","GLOBAL",1)
+END
+
+
  IF
     InParty(Myself)
     See(Player1)
     CombatCounter(0)
     !Detect([ENEMY])
     AreaCheck("AR2500")
+    Global("LK#NepheleWasInUnderdark","GLOBAL",1)
     Global("LK#NepheleEscapedUnderdark","GLOBAL",0)
 THEN
   RESPONSE #100

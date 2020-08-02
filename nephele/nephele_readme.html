@@ -314,7 +314,7 @@
 
           <a href="http://www.spellholdstudios.net/ie/nephele">Mod Website</a> &#8226;
           <a href="http://www.shsforums.net/forum/608-nephele/">Mod Forum</a> &#8226;
-          Version: 2.5
+          Version: 2.6
         </p>
         <hr />
         <p class="menu">
@@ -350,14 +350,66 @@
         <a name="installation" id="installation"></a>
         <div class="content">
           <h2>Installation</h2>
-          <h5>PC</h5>
 
-          <p>The Nephele NPC is a WeiDU mod, packaged in an extractable .RAR archive. Simply unrar <em>"nephele_v1.rar"</em> (<a href="http://www.rarlabs.com">WinRAR</a>) into your Baldur's Gate II directory and run <em>"setup-nephele.exe"</em>.
-          <p>To uninstall, run <em>"setup-nephele.exe"</em> again and select the uninstall option.</p>
+		<h5>Notes</h5>
+
+		<p style="margin-top:2%;">
+			<em>If you've previously installed the mod, remove it before extracting the new version. To do this, run <strong><span style="font-family: Courier New;font-size: 100%;border: 1px solid black;background-color: black;color: #deded9;">&nbsp;setup-nephele.exe&nbsp;</span></strong>, uninstall all previously installed components and delete the nephele folder.</em>
+		</p>
+		<p>
+			<em>When installing or uninstalling, <strong>do not close the <acronym title="Disk Operating System">DOS</acronym> window</strong> by clicking on the <strong>X</strong> button! Instead, press the <strong>Enter</strong> key whenever instructed to do so.</em>
+		</p>
+		<p>
+			<em><strong>Disable any antivirus</strong> or other memory-resident software before installing this or any other mod. Some (particularly avast and Norton!) have a tendency to report false positives with mod activity, resulting in failed installs.</em>
+		</p>
+		
+		<h5>Enhanced Editions Note</h5>
+
+		<p style="margin-top:2%;">
+			The Enhanced Editions are actively supported games. Please note that every patch update will wipe your current mod setup! If in the middle of a modded game you might want to delay the patch update (if possible) as even after reinstalling the mods, you might not be able to continue with your old savegames. Alternatively, copy the whole game's folder into a new one that can be modded and will stay untouched by game patches. It is important that you install the mod to the language version you are playing the game in. Otherwise, the dialogues of the mod will not show but give error messages.
+		</p><br>
+		
+		<h5>Windows</h5>
+
+		<p style="margin-top:2%;">
+			Extract the contents of the mod to the folder of the game you wish to modify (<em>the folder which contains the "CHITIN.KEY" file</em>). On successful extraction, there should be an nephele folder and a setup-nephele.exe file in your game folder. To install, simply double-click <strong><span style="font-family: Courier New;font-size: 100%;border: 1px solid black;background-color: black;color: #deded9;">&nbsp;setup-nephele.exe&nbsp;</span></strong> and follow the instructions on screen.
+		</p>
+		<p>
+			Run <strong><span style="font-family: Courier New;font-size: 100%;border: 1px solid black;background-color: black;color: #deded9;">&nbsp;setup-nephele.exe&nbsp;</span></strong> in your game folder to reinstall, un-install or otherwise change components.
+		</p></br>
+
+		<h5>Mac OS X</h5>
+
+		<p style="margin-top:2%;">
+			MYMOD for Mac OS X is distributed as a compressed tarball and includes a <acronym title="Weimer Dialogue Utility">WeiDU</acronym> installer.
+		</p>
+		<p>
+			First, extract the files from the tarball into your game directory. On successful extraction, there should be a mymod folder, setup-nephele and setup-nephele.command files in your game folder. To install, double-click <strong><span style="font-family: Courier New;font-size: 100%;border: 1px solid black;background-color: black;color: #deded9;">&nbsp;setup-nephele.command&nbsp;</span></strong> and follow the instructions on screen.
+		</p>
+		<p>
+			You can run <strong><span style="font-family: Courier New;font-size: 100%;border: 1px solid black;background-color: black;color: #deded9;">&nbsp;setup-nephele.command&nbsp;</span></strong> in your game folder to reinstall, un-install or otherwise the components settings.
+		</p></br>
+
+		<h5>Linux</h5>
+
+		<p style="margin-top:2%;">
+			Extract the contents of the mod to the folder of the game you wish to modify.
+		</p>
+		<p>
+			Download the latest Linux version of <a href="https://github.com/WeiDUorg/weidu/releases"><acronym title="Weimer Dialogue Utility">WeiDU</acronym></a> and copy WeiDU and WeInstall to /usr/bin. Then open a terminal and <strong>cd</strong> to your game installation directory.
+		</p>
+		<p>
+			<em>Optional: run 'tolower' and answer 'Y' to both queries. You can avoid running the second option (linux.ini) if you've already ran it once in the same directory. To save time, the archive is already tolowered, so there's no need to run the first option (lowercasing file names) either, if you've extracted only this mod since the last time you lowercased file names. If unsure, running tolower and choosing both options is the safe bet.</em>
+		</p>
+		<p>
+			Run <strong><span style="font-family: Courier New;font-size: 100%;border: 1px solid black;background-color: black;color: #deded9;">&nbsp;WeInstall setup-nephele&nbsp;</span></strong> in your game folder to install the mod. Then run <strong><span style="font-family: Courier New;font-size: 100%;border: 1px solid black;background-color: black;color: #deded9;">&nbsp;wine BGMain.exe&nbsp;</span></strong> and start playing.
+		</p><br>
+		
+		
           <h5>Compatibility and Installation Order</h5>
 
-          <p>The Nephele NPC mod should be compatible with all WeiDU mods, however, we cannot test every single one. It is only compatible with BGII: ToB. If you do encounter an error, please contact K'aeloree (kae@spellholdstudios.net) or alternatively post on the <a href="http://www.shsforums.net/forum/608-nephele/">forums</a>.</p>
-          <p>Please install the latest version of the <a href="http://www.gibberlings3.net/bg2fixpack/">BG2 Fixpack</a>. Some parts of the mod may not work correctly without it.</p>
+          <p>The Nephele NPC mod should be compatible with all WeiDU mods, however, we cannot test every single one. It is compatible with all BGII:ToB games: BGII, BGT, BGII:EE, and EET. If you do encounter an error, please post on the <a href="http://www.shsforums.net/forum/608-nephele/">forums</a>.</p>
+          <p>Please install the latest version of the <a href="http://www.gibberlings3.net/bg2fixpack/">BG2 Fixpack</a> before Nephele. Some parts of the mod may not work correctly without it.</p>
           <address>
             <span class="footer">Nephele NPC &gt; Installation</span> <a href="#top">BACK TO TOP</a>
           </address>
@@ -437,11 +489,11 @@
           <hr class="floatfix" />
           <h5>Programs/tools used in creation:</h5><br />
           <ul>
-            <li><a href="http://www.weidu.org">WeiDU</a>, by Westley Weimer/Valerio Bigiani (the bigg)</li>
-            <li><a href="http://www.idi.ntnu.no/~joh/ni/">Near Infinity</a>, by Jon Olav Hauglid</li>
+            <li><a href="https://github.com/WeiDUorg/weidu/releases/latest">WeiDU</a>, originally by Westley Weimer/Valerio Bigiani (the bigg)</li>
+            <li><a href="https://forums.beamdog.com/discussion/30593/new-versions-of-nearinfinity-available/p1">Near Infinity</a><, originally by Jon Olav Hauglid</li>
             <li><a href="http://www.shsforums.net/topic/31285-infinity-explorer-v085/">Infinity Explorer</a>, by Dmitry Jemerov/bigmoshi</li>
             <li><a href="http://www.rarlab.com/">WinRAR</a>, by Eugene Roshal/Alexander Roshal</li>
-            <li><a href="http://iesdp.gibberlings3.net">IESDP</a>, maintained by igi</li>
+            <li><a href="https://gibberlings3.github.io/iesdp/index.htm">IESDP</a></li>
           </ul>
           <h5>Copyright Notice:</h5>
           <div class="important">
@@ -462,11 +514,17 @@
 
         <div class="content">
           <h2>Version history</h2>
+          <h6>2nd August 2020 - Version 2.6 (by jastey):</h6>
+          <ul>
+            <li>Nephele will not comment on situations if she was not in party (meeting Bodhi, meeting Aran, Bodhi escaped first time, escaping Underdark.)</li>
+            <li>Nephele will receive XP up to the PC's level upon first joining (up to 3,000,000 XP)</li>
+            <li>Changed download link in nephele.ini to GitHub repo</li>
+            <li>added folder libiconv-1.9.2-1-src.7z with iconv licence info</li>
+          </ul>
           <h6>14th April 2019 - Version 2.5 (by jastey):</h6>
           <ul>
             <li>Fixed repeating Nephele-Nalia banter</li>
           </ul>
-          <h2>Version history</h2>
           <h6>12th March 2019 - Version 2.4 (by jastey):</h6>
           <ul>
             <li>EET compatibility added</li>

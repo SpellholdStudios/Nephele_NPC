@@ -5,7 +5,7 @@
 BACKUP ~nephele/backup~
 //AUTHOR ~K'aeloree (kae@spellholdstudios.net)~
 SUPPORT ~http://www.shsforums.net/forum/608-nephele/~
-VERSION ~v2.5~
+VERSION ~v2.6~
 README ~nephele/nephele_readme.html~
 
 ALWAYS
@@ -245,8 +245,10 @@ COMPILE ~nephele/dialogue/lk#ne25p.d~
 
 // Compiling scripts...
 COMPILE EVALUATE_BUFFER ~nephele/scripts/lk#neph.baf~
+EXTEND_BOTTOM ~lk#neph.bcs~ ~nephele/scripts/c#_lvl_once_20.baf~
 COMPILE ~nephele/scripts/lk#nepd.baf~
 COMPILE ~nephele/scripts/lk#ne25.baf~
+EXTEND_BOTTOM ~lk#ne25.bcs~ ~nephele/scripts/c#_lvl_once_20.baf~
 EXTEND_BOTTOM ~ar2010.bcs~ ~nephele/scripts/ar2010.baf~
 EXTEND_TOP ~ar6200.bcs~ ~nephele/scripts/ar6200.baf~
 

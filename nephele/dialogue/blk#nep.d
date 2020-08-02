@@ -7,13 +7,14 @@ BEGIN BLK#NEP
 CHAIN IF ~InParty("Aerie")
 See("Aerie")
 !StateCheck("Aerie",CD_STATE_NOTVALID)
+InParty("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
 CombatCounter(0)
 // Quayle dead
 Dead("quayle")
-Global("LK#NepheleAerie_Quayle","LOCALS",0)~ THEN BLK#NEP LK#NepheleAerie_1
+Global("LK#NepheleAerie_Quayle","GLOBAL",0)~ THEN BLK#NEP LK#NepheleAerie_1
 @0
-DO ~ActionOverride("Aerie",SetGlobal("LK#NepheleAerie_Quayle","LOCALS",1)) ActionOverride("Nephele",SetGlobal("LK#NepheleAerie_Quayle","LOCALS",1))~
+DO ~SetGlobal("LK#NepheleAerie_Quayle","GLOBAL",1)~
 == BAERIE @1
 == BLK#NEP @2
 == BAERIE @3
@@ -30,11 +31,12 @@ EXIT
 CHAIN IF ~InParty("Nephele")
 See("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
+InParty("Aerie")
 !StateCheck("Aerie",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("LK#NepheleAerie","LOCALS",0)~ THEN BAERIE LK#NepheleAerie_2
+Global("LK#NepheleAerie","GLOBAL",0)~ THEN BAERIE LK#NepheleAerie_2
 @11
-DO ~ActionOverride("Aerie",SetGlobal("LK#NepheleAerie","LOCALS",1)) ActionOverride("Nephele",SetGlobal("LK#NepheleAerie","LOCALS",1))~
+DO ~SetGlobal("LK#NepheleAerie","GLOBAL",1)~
 == BLK#NEP @12
 == BAERIE @13
 == BLK#NEP @14
@@ -49,12 +51,13 @@ EXIT
 CHAIN IF ~InParty("Aerie")
 See("Aerie")
 !StateCheck("Aerie",CD_STATE_NOTVALID)
+InParty("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("HaerdalisRomanceActive","GLOBAL",2)
-Global("LK#NepheleAerie_haerdalis","LOCALS",0)~ THEN BLK#NEP LK#NepheleAerie_haerdalis
+Global("LK#NepheleAerie_haerdalis","GLOBAL",0)~ THEN BLK#NEP LK#NepheleAerie_haerdalis
 @20
-DO ~ActionOverride("Aerie",SetGlobal("LK#NepheleAerie_haerdalis","LOCALS",1)) ActionOverride("Nephele",SetGlobal("LK#NepheleAerie_haerdalis","LOCALS",1))~
+DO ~SetGlobal("LK#NepheleAerie_haerdalis","GLOBAL",1)~
 == BAERIE @21
 == BLK#NEP @22
 == BAERIE @23
@@ -69,11 +72,12 @@ EXIT
 CHAIN IF ~InParty("Anomen")
 See("Anomen")
 !StateCheck("Anomen",CD_STATE_NOTVALID)
+InParty("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("LK#NepheleAnomen","LOCALS",0)~ THEN BLK#NEP LK#NepheleAnomen_1
+Global("LK#NepheleAnomen","GLOBAL",0)~ THEN BLK#NEP LK#NepheleAnomen_1
 @29
-DO ~ActionOverride("Anomen",SetGlobal("LK#NepheleAnomen","LOCALS",1)) ActionOverride("Nephele",SetGlobal("LK#NepheleAnomen","LOCALS",1))~
+DO ~SetGlobal("LK#NepheleAnomen","GLOBAL",1)~
 == BLK#NEP @30
 == BANOMEN @31
 == BLK#NEP @32
@@ -84,12 +88,13 @@ EXIT
 CHAIN IF ~InParty("Anomen")
 See("Anomen")
 !StateCheck("Anomen",CD_STATE_NOTVALID)
+InParty("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
 Alignment("Anomen",LAWFUL_GOOD)
 CombatCounter(0)
-Global("LK#NepheleAnomen_lg","LOCALS",0)~ THEN BLK#NEP LK#NepheleAnomen_lg
+Global("LK#NepheleAnomen_lg","GLOBAL",0)~ THEN BLK#NEP LK#NepheleAnomen_lg
 @34
-DO ~ActionOverride("Anomen",SetGlobal("LK#NepheleAnomen_lg","LOCALS",1)) ActionOverride("Nephele",SetGlobal("LK#NepheleAnomen_lg","LOCALS",1))~
+DO ~SetGlobal("LK#NepheleAnomen_lg","GLOBAL",1)~
 == BANOMEN @35
 == BLK#NEP @36
 = @37
@@ -101,12 +106,13 @@ EXIT
 CHAIN IF ~InParty("Nephele")
 See("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
+InParty("Anomen")
 !StateCheck("Anomen",CD_STATE_NOTVALID)
 Alignment(Myself,CHAOTIC_NEUTRAL)
 CombatCounter(0)
-Global("LK#NepheleAnomen_cn","LOCALS",0)~ THEN BANOMEN LK#NepheleAnomen_cn
+Global("LK#NepheleAnomen_cn","GLOBAL",0)~ THEN BANOMEN LK#NepheleAnomen_cn
 @40
-DO ~ActionOverride("Anomen",SetGlobal("LK#NepheleAnomen_cn","LOCALS",1)) ActionOverride("Nephele",SetGlobal("LK#NepheleAnomen_cn","LOCALS",1))~
+DO ~SetGlobal("LK#NepheleAnomen_cn","GLOBAL",1)~
 == BLK#NEP @41
 == BANOMEN @42
 == BLK#NEP @43
@@ -116,12 +122,13 @@ EXIT
 CHAIN IF ~InParty("Nephele")
 See("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
+InParty("Cernd")
 !StateCheck("Cernd",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("CerndBaby","GLOBAL",1)
-Global("LK#NepheleCernd","LOCALS",0)~ THEN BCERND LK#NepheleCernd_1
+Global("LK#NepheleCernd","GLOBAL",0)~ THEN BCERND LK#NepheleCernd_1
 @44
-DO ~ActionOverride("Cernd",SetGlobal("LK#NepheleCernd","LOCALS",1)) ActionOverride("Nephele",SetGlobal("LK#NepheleCernd","LOCALS",1))~
+DO ~SetGlobal("LK#NepheleCernd","GLOBAL",1)~
 == BLK#NEP @45
 == BCERND @46
 == BLK#NEP @47
@@ -135,11 +142,12 @@ EXIT
 CHAIN IF ~InParty("Nephele")
 See("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
+InParty("Cernd")
 !StateCheck("Cernd",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("LK#NepheleCernd","LOCALS",1)~ THEN BCERND LK#NepheleCernd_2
+Global("LK#NepheleCernd","GLOBAL",1)~ THEN BCERND LK#NepheleCernd_2
 @52
-DO ~ActionOverride("Cernd",SetGlobal("LK#NepheleCernd","LOCALS",2)) ActionOverride("Nephele",SetGlobal("LK#NepheleCernd","LOCALS",2))~
+DO ~SetGlobal("LK#NepheleCernd","GLOBAL",2)~
 == BLK#NEP @53
 == BCERND @54
 = @55
@@ -155,12 +163,13 @@ EXIT
 CHAIN IF ~InParty("Nephele")
 See("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
+InParty("Edwin")
 !StateCheck("Edwin",CD_STATE_NOTVALID)
 CombatCounter(0)
 // Edwin has scroll
-Global("LK#NepheleEdwin","LOCALS",0)~ THEN BEDWIN LK#NepheleEdwin_1
+Global("LK#NepheleEdwin","GLOBAL",0)~ THEN BEDWIN LK#NepheleEdwin_1
 @61
-DO ~ActionOverride("Edwin",SetGlobal("LK#NepheleEdwin","LOCALS",1)) ActionOverride("Nephele",SetGlobal("LK#NepheleEdwin","LOCALS",1))~
+DO ~SetGlobal("LK#NepheleEdwin","GLOBAL",1)~
 == BLK#NEP @62
 == BEDWIN @63
 == BLK#NEP @64
@@ -174,11 +183,12 @@ CHAIN IF ~InParty("Edwin")
 See("Edwin")
 Gender("Edwin",FEMALE)
 !StateCheck("Edwin",CD_STATE_NOTVALID)
+InParty("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("LK#NepheleEdwin_Dress","LOCALS",0)~ THEN BLK#NEP LK#NepheleEdwin_2
+Global("LK#NepheleEdwin_Dress","GLOBAL",0)~ THEN BLK#NEP LK#NepheleEdwin_2
 @68
-DO ~ActionOverride("Edwin",SetGlobal("LK#NepheleEdwin_Dress","LOCALS",1)) ActionOverride("Nephele",SetGlobal("LK#NepheleEdwin_Dress","LOCALS",1))~
+DO ~SetGlobal("LK#NepheleEdwin_Dress","GLOBAL",1)~
 == BEDWIN @69
 == BLK#NEP @70
 == BEDWIN @71
@@ -191,12 +201,13 @@ EXIT
 CHAIN IF ~InParty("Haerdalis")
 See("Haerdalis")
 !StateCheck("Haerdalis",CD_STATE_NOTVALID)
+InParty("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
 Global("HaerDalisFree","GLOBAL",2)
 CombatCounter(0)
-Global("LK#NepheleHaerdalis","LOCALS",0)~ THEN BLK#NEP LK#NepheleHaerdalis_1
+Global("LK#NepheleHaerdalis","GLOBAL",0)~ THEN BLK#NEP LK#NepheleHaerdalis_1
 @74
-DO ~ActionOverride("Haerdalis",SetGlobal("LK#NepheleHaerdalis","LOCALS",1)) ActionOverride("Nephele",SetGlobal("LK#NepheleHaerdalis","LOCALS",1))~
+DO ~SetGlobal("LK#NepheleHaerdalis","GLOBAL",1)~
 == BHAERDA @75
 == BLK#NEP @76
 == BHAERDA @77
@@ -211,11 +222,12 @@ EXIT
 CHAIN IF ~InParty("Nephele")
 See("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
+InParty("Haerdalis")
 !StateCheck("Haerdalis",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("LK#NepheleHaerdalis","LOCALS",1)~ THEN BHAERDA LK#NepheleHaerdalis_2
+Global("LK#NepheleHaerdalis","GLOBAL",1)~ THEN BHAERDA LK#NepheleHaerdalis_2
 @83
-DO ~ActionOverride("Haerdalis",SetGlobal("LK#NepheleHaerdalis","LOCALS",2)) ActionOverride("Nephele",SetGlobal("LK#NepheleHaerdalis","LOCALS",2))~
+DO ~SetGlobal("LK#NepheleHaerdalis","GLOBAL",2)~
 == BLK#NEP @84
 == BHAERDA @85
 == BLK#NEP @86
@@ -232,11 +244,12 @@ EXIT
 CHAIN IF ~InParty("Imoen2")
 See("Imoen2")
 !StateCheck("Imoen2",CD_STATE_NOTVALID)
+InParty("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("LK#NepheleImoen","LOCALS",0)~ THEN BLK#NEP LK#NepheleImoen_1
+Global("LK#NepheleImoen","GLOBAL",0)~ THEN BLK#NEP LK#NepheleImoen_1
 @93
-DO ~ActionOverride("Imoen2",SetGlobal("LK#NepheleImoen","LOCALS",1)) ActionOverride("Nephele",SetGlobal("LK#NepheleImoen","LOCALS",1))~
+DO ~SetGlobal("LK#NepheleImoen","GLOBAL",1)~
 == BIMOEN2 @94
 == BLK#NEP @95
 = @96
@@ -253,11 +266,12 @@ EXIT
 CHAIN IF ~InParty("Jaheira")
 See("Jaheira")
 !StateCheck("Jaheira",CD_STATE_NOTVALID)
+InParty("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("LK#NepheleJaheira","LOCALS",0)~ THEN BLK#NEP LK#NepheleJaheira_1
+Global("LK#NepheleJaheira","GLOBAL",0)~ THEN BLK#NEP LK#NepheleJaheira_1
 @103
-DO ~ActionOverride("Jaheira",SetGlobal("LK#NepheleJaheira","LOCALS",1)) ActionOverride("Nephele",SetGlobal("LK#NepheleJaheira","LOCALS",1))~
+DO ~SetGlobal("LK#NepheleJaheira","GLOBAL",1)~
 == BJAHEIR @104
 == BLK#NEP @105
 == BJAHEIR @106
@@ -268,11 +282,12 @@ EXIT
 CHAIN IF ~InParty("Jaheira")
 See("Jaheira")
 !StateCheck("Jaheira",CD_STATE_NOTVALID)
+InParty("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("LK#NepheleJaheira","LOCALS",1)~ THEN BLK#NEP LK#NepheleJaheira_2
+Global("LK#NepheleJaheira","GLOBAL",1)~ THEN BLK#NEP LK#NepheleJaheira_2
 @107
-DO ~ActionOverride("Jaheira",SetGlobal("LK#NepheleJaheira","LOCALS",2)) ActionOverride("Nephele",SetGlobal("LK#NepheleJaheira","LOCALS",2))~
+DO ~SetGlobal("LK#NepheleJaheira","GLOBAL",2)~
 == BJAHEIR @108
 == BLK#NEP @109
 = @110
@@ -284,14 +299,15 @@ EXIT
 CHAIN IF ~InParty("Jaheira")
 See("Jaheira")
 !StateCheck("Jaheira",CD_STATE_NOTVALID)
+InParty("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("LK#NepheleJaheira_Romance","LOCALS",0)
+Global("LK#NepheleJaheira_Romance","GLOBAL",0)
 OR(2)
 Global("JaheiraRomanceActive","GLOBAL",1)
 Global("JaheiraRomanceActive","GLOBAL",2)~ THEN BLK#NEP LK#NepheleJaheira_Romance
 @112
-DO ~ActionOverride("Jaheira",SetGlobal("LK#NepheleJaheira_Romance","LOCALS",1)) ActionOverride("Nephele",SetGlobal("LK#NepheleJaheira_Romance","LOCALS",1))~
+DO ~SetGlobal("LK#NepheleJaheira_Romance","GLOBAL",1)~
 == BJAHEIR @113
 == BLK#NEP @114
 == BJAHEIR @115
@@ -304,11 +320,12 @@ EXIT
 CHAIN IF ~InParty("Nephele")
 See("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
+InParty("Jan")
 !StateCheck("Jan",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("LK#NepheleJan","LOCALS",0)~ THEN BJAN LK#NepheleJan_1
+Global("LK#NepheleJan","GLOBAL",0)~ THEN BJAN LK#NepheleJan_1
 @118
-DO ~ActionOverride("Jan",SetGlobal("LK#NepheleJan","LOCALS",1)) ActionOverride("Nephele",SetGlobal("LK#NepheleJan","LOCALS",1))~
+DO ~SetGlobal("LK#NepheleJan","GLOBAL",1)~
 == BLK#NEP @119
 == BJAN @120
 == BLK#NEP @121
@@ -325,11 +342,12 @@ EXIT
 CHAIN IF ~InParty("Keldorn")
 See("Keldorn")
 !StateCheck("Keldorn",CD_STATE_NOTVALID)
+InParty("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("LK#NepheleKeldorn","LOCALS",0)~ THEN BLK#NEP LK#NepheleKeldorn_1
+Global("LK#NepheleKeldorn","GLOBAL",0)~ THEN BLK#NEP LK#NepheleKeldorn_1
 @128
-DO ~ActionOverride("Keldorn",SetGlobal("LK#NepheleKeldorn","LOCALS",1)) ActionOverride("Nephele",SetGlobal("LK#NepheleKeldorn","LOCALS",1))~
+DO ~SetGlobal("LK#NepheleKeldorn","GLOBAL",1)~
 == BKELDOR @129
 == BLK#NEP @130
 == BKELDOR @131
@@ -341,11 +359,12 @@ EXIT
 CHAIN IF ~InParty("Keldorn")
 See("Keldorn")
 !StateCheck("Keldorn",CD_STATE_NOTVALID)
+InParty("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("LK#NepheleKeldorn","LOCALS",1)~ THEN BLK#NEP LK#NepheleKeldorn_2
+Global("LK#NepheleKeldorn","GLOBAL",1)~ THEN BLK#NEP LK#NepheleKeldorn_2
 @134
-DO ~ActionOverride("Keldorn",SetGlobal("LK#NepheleKeldorn","LOCALS",2)) ActionOverride("Nephele",SetGlobal("LK#NepheleKeldorn","LOCALS",2))~
+DO ~SetGlobal("LK#NepheleKeldorn","GLOBAL",2)~
 == BKELDOR @135
 == BLK#NEP @136
 == BKELDOR @137
@@ -356,11 +375,12 @@ EXIT
 CHAIN IF ~InParty("Nephele")
 See("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
+InParty("Korgan")
 !StateCheck("Korgan",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("LK#NepheleKorgan","LOCALS",0)~ THEN BKORGAN LK#NepheleKorgan_1
+Global("LK#NepheleKorgan","GLOBAL",0)~ THEN BKORGAN LK#NepheleKorgan_1
 @138
-DO ~ActionOverride("Korgan",SetGlobal("LK#NepheleKorgan","LOCALS",1)) ActionOverride("Nephele",SetGlobal("LK#NepheleKorgan","LOCALS",1))~
+DO ~SetGlobal("LK#NepheleKorgan","GLOBAL",1)~
 == BLK#NEP @139
 == BKORGAN @140
 == BLK#NEP @141
@@ -371,11 +391,12 @@ EXIT
 CHAIN IF ~InParty("Mazzy")
 See("Mazzy")
 !StateCheck("Mazzy",CD_STATE_NOTVALID)
+InParty("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("LK#NepheleMazzy","LOCALS",0)~ THEN BLK#NEP LK#NepheleMazzy_1
+Global("LK#NepheleMazzy","GLOBAL",0)~ THEN BLK#NEP LK#NepheleMazzy_1
 @142
-DO ~ActionOverride("Mazzy",SetGlobal("LK#NepheleMazzy","LOCALS",1)) ActionOverride("Nephele",SetGlobal("LK#NepheleMazzy","LOCALS",1))~
+DO ~SetGlobal("LK#NepheleMazzy","GLOBAL",1)~
 == BMAZZY @143
 = @144
 == BLK#NEP @145
@@ -388,11 +409,12 @@ EXIT
 CHAIN IF ~InParty("Mazzy")
 See("Mazzy")
 !StateCheck("Mazzy",CD_STATE_NOTVALID)
+InParty("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("LK#NepheleMazzy","LOCALS",1)~ THEN BLK#NEP LK#NepheleMazzy_2
+Global("LK#NepheleMazzy","GLOBAL",1)~ THEN BLK#NEP LK#NepheleMazzy_2
 @149
-DO ~ActionOverride("Mazzy",SetGlobal("LK#NepheleMazzy","LOCALS",2)) ActionOverride("Nephele",SetGlobal("LK#NepheleMazzy","LOCALS",2))~
+DO ~SetGlobal("LK#NepheleMazzy","GLOBAL",2)~
 == BMAZZY @150
 == BLK#NEP @151
 == BMAZZY @152
@@ -405,11 +427,12 @@ EXIT
 CHAIN IF ~InParty("Minsc")
 See("Minsc")
 !StateCheck("Minsc",CD_STATE_NOTVALID)
+InParty("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("LK#NepheleMinsc","LOCALS",0)~ THEN BLK#NEP LK#NepheleMinsc_1
+Global("LK#NepheleMinsc","GLOBAL",0)~ THEN BLK#NEP LK#NepheleMinsc_1
 @155
-DO ~ActionOverride("Minsc",SetGlobal("LK#NepheleMinsc","LOCALS",1)) ActionOverride("Nephele",SetGlobal("LK#NepheleMinsc","LOCALS",1))~
+DO ~SetGlobal("LK#NepheleMinsc","GLOBAL",1)~
 == BMINSC @156
 = @157
 == BLK#NEP @158
@@ -427,11 +450,12 @@ EXIT
 CHAIN IF ~InParty("Nephele")
 See("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
+InParty("Minsc")
 !StateCheck("Minsc",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("LK#NepheleMinsc","LOCALS",1)~ THEN BMINSC LK#NepheleMinsc_2
+Global("LK#NepheleMinsc","GLOBAL",1)~ THEN BMINSC LK#NepheleMinsc_2
 @166
-DO ~ActionOverride("Minsc",SetGlobal("LK#NepheleMinsc","LOCALS",2)) ActionOverride("Nephele",SetGlobal("LK#NepheleMinsc","LOCALS",2))~
+DO ~SetGlobal("LK#NepheleMinsc","GLOBAL",2)~
 == BLK#NEP @167
 == BMINSC @168
 == BLK#NEP @169
@@ -445,11 +469,12 @@ EXIT
 CHAIN IF ~InParty("Nephele")
 See("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
+InParty("Nalia")
 !StateCheck("Nalia",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("LK#NepheleNalia","GLOBAL",0)~ THEN BNALIA LK#NepheleNalia_1
 @172
-DO ~ActionOverride("Nalia",SetGlobal("LK#NepheleNalia","GLOBAL",1)) ActionOverride("Nephele",SetGlobal("LK#NepheleNalia","GLOBAL",1)) SetGlobalTimer("LK#NepheleNalia_potion","GLOBAL",ONE_DAY)~
+DO ~SetGlobal("LK#NepheleNalia","GLOBAL",1) SetGlobalTimer("LK#NepheleNalia_potion","GLOBAL",ONE_DAY)~
 == BNALIA @173
 == BLK#NEP @174
 == BNALIA @175
@@ -463,7 +488,7 @@ EXIT
 CHAIN IF WEIGHT #-1
 ~Global("LK#NepheleNalia","GLOBAL",2)~ THEN NALIAJ LK#NepheleNalia_2
 @179
-DO ~ActionOverride("Nalia",SetGlobal("LK#NepheleNalia","GLOBAL",2)) ActionOverride("Nephele",SetGlobal("LK#NepheleNalia","GLOBAL",2))~
+DO ~SetGlobal("LK#NepheleNalia","GLOBAL",2)~
 == LK#NEPJ @180
 == NALIAJ @181
 == LK#NEPJ @182
@@ -476,11 +501,12 @@ EXIT
 CHAIN IF ~InParty("Valygar")
 See("Valygar")
 !StateCheck("Valygar",CD_STATE_NOTVALID)
+InParty("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("LK#NepheleValygar","LOCALS",0)~ THEN BLK#NEP LK#NepheleValygar_1
+Global("LK#NepheleValygar","GLOBAL",0)~ THEN BLK#NEP LK#NepheleValygar_1
 @185
-DO ~ActionOverride("Valygar",SetGlobal("LK#NepheleValygar","LOCALS",1)) ActionOverride("Nephele",SetGlobal("LK#NepheleValygar","LOCALS",1))~
+DO ~SetGlobal("LK#NepheleValygar","GLOBAL",1)~
 == BVALYGA @186
 == BLK#NEP @187
 == BVALYGA @188
@@ -496,11 +522,12 @@ EXIT
 CHAIN IF ~InParty("Valygar")
 See("Valygar")
 !StateCheck("Valygar",CD_STATE_NOTVALID)
+InParty("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("LK#NepheleValygar","LOCALS",0)~ THEN BLK#NEP LK#NepheleValygar_2
+Global("LK#NepheleValygar","GLOBAL",0)~ THEN BLK#NEP LK#NepheleValygar_2
 @195
-DO ~ActionOverride("Valygar",SetGlobal("LK#NepheleValygar","LOCALS",2)) ActionOverride("Nephele",SetGlobal("LK#NepheleValygar","LOCALS",2))~
+DO ~SetGlobal("LK#NepheleValygar","GLOBAL",2)~
 == BVALYGA @196
 == BLK#NEP @197
 == BVALYGA @198
@@ -512,11 +539,12 @@ EXIT
 CHAIN IF ~InParty("Viconia")
 See("Viconia")
 !StateCheck("Viconia",CD_STATE_NOTVALID)
+InParty("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("LK#NepheleViconia","LOCALS",0)~ THEN BLK#NEP LK#NepheleViconia_1
+Global("LK#NepheleViconia","GLOBAL",0)~ THEN BLK#NEP LK#NepheleViconia_1
 @200
-DO ~ActionOverride("Viconia",SetGlobal("LK#NepheleViconia","LOCALS",1)) ActionOverride("Nephele",SetGlobal("LK#NepheleViconia","LOCALS",1))~
+DO ~SetGlobal("LK#NepheleViconia","GLOBAL",1)~
 == BVICONI @201
 = @202
 = @203
@@ -528,12 +556,13 @@ EXIT
 CHAIN IF ~InParty("Viconia")
 See("Viconia")
 !StateCheck("Viconia",CD_STATE_NOTVALID)
+InParty("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
 CombatCounter(0)
-GlobalGT("chapter","GLOBAL",5)
-Global("LK#NepheleViconia","LOCALS",1)~ THEN BLK#NEP LK#NepheleViconia_2
+GlobalGT("chapter","GLOBAL",%bg_chapter_5%)
+Global("LK#NepheleViconia","GLOBAL",1)~ THEN BLK#NEP LK#NepheleViconia_2
 @206
-DO ~ActionOverride("Viconia",SetGlobal("LK#NepheleViconia","LOCALS",2)) ActionOverride("Nephele",SetGlobal("LK#NepheleViconia","LOCALS",2))~
+DO ~SetGlobal("LK#NepheleViconia","GLOBAL",2)~
 == BVICONI @207
 == BLK#NEP @208
 == BVICONI @209
@@ -544,11 +573,12 @@ EXIT
 CHAIN IF ~InParty("Yoshimo")
 See("Yoshimo")
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)
+InParty("Nephele")
 !StateCheck("Nephele",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("LK#NepheleYoshimo","LOCALS",0)~ THEN BLK#NEP LK#NepheleYoshimo_1
+Global("LK#NepheleYoshimo","GLOBAL",0)~ THEN BLK#NEP LK#NepheleYoshimo_1
 @210
-DO ~ActionOverride("Yoshimo",SetGlobal("LK#NepheleYoshimo","LOCALS",1)) ActionOverride("Nephele",SetGlobal("LK#NepheleYoshimo","LOCALS",1))~
+DO ~SetGlobal("LK#NepheleYoshimo","GLOBAL",1)~
 == BYOSHIM @211
 = @212
 == BLK#NEP @213

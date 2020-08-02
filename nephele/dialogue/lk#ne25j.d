@@ -374,63 +374,63 @@ END
 // ---------------------------------------------
 
 I_C_T AMBAR01 18 LK#N_ambar01
-== LK#NE25J IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @130
+== LK#NE25J IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @130
 END
 
 I_C_T AMCARRAS 7 LK#N_amcarras
-== LK#NE25J IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @131
+== LK#NE25J IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @131
 END
 
 I_C_T AMCARRAS 5 LK#N_amcarras2
-== LK#NE25J IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @132
+== LK#NE25J IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @132
 END
 
 I_C_T AMCLER01 3 LK#N_amcler01
-== LK#NE25J IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @133
+== LK#NE25J IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @133
 END
 
 I_C_T AMMAYOR 5 LK#N_ammayor
-== LK#NE25J IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @134
+== LK#NE25J IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @134
 END
 
 I_C_T AMMONK02 3 LK#N_ammonk02
-== LK#NE25J IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @135
+== LK#NE25J IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @135
 END
 
 I_C_T AMSAEMON 16 LK#N_amsaemon
-== LK#NE25J IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @136
+== LK#NE25J IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @136
 END
 
 I_C_T BAZEYE01 9 LK#N_bazeye01
-== LK#NE25J IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @137
+== LK#NE25J IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @137
 END
 
 I_C_T2 BAZMONK 3 LK#N_bazmonk
-== LK#NE25J IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @138
+== LK#NE25J IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @138
 END
 
 I_C_T BAZPAT01 16 LK#N_bazpat01
-== LK#NE25J IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @139
+== LK#NE25J IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @139
 END
 
 I_C_T HGNYA01 6 LK#N_nyalee
-== LK#NE25J IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @140
+== LK#NE25J IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @140
 END
 
 I_C_T HGNYA01 29 LK#N_nyalee2
-== LK#NE25J IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @141
+== LK#NE25J IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @141
 END
 
 I_C_T SARCNT01 6 LK#N_sarcnt01
-== LK#NE25J IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @142
+== LK#NE25J IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @142
 END
 
 I_C_T SARCNT01 9 LK#N_sarcnt011
-== LK#NE25J IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @143
+== LK#NE25J IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @143
 END
 
 EXTEND_BOTTOM SARCNT01 14
-  IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ DO ~CreateCreatureObjectOffScreen("sargrd03",Myself(),0,0,0)
+  IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ DO ~CreateCreatureObjectOffScreen("sargrd03",Myself(),0,0,0)
 CreateCreatureObjectOffScreen("sargrd03",Myself(),0,0,0)
 CreateCreatureObjectOffScreen("sargrd03",Myself(),0,0,0)
 CreateCreatureObjectOffScreen("sargrd03",Myself(),0,0,0)
@@ -464,55 +464,55 @@ END
 END
 
 I_C_T2 SARKIS01 36 LK#N_sarkis01
-== LK#NE25J IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @145
+== LK#NE25J IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @145
 END
 
 
 // Watcher's Keep interjections
 
 I_C_T FSSPIR2 1 LK#N_fsspir2
-== LK#NE25J IF ~GlobalGT("chapter","GLOBAL",7) InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @146
+== LK#NE25J IF ~GlobalGT("chapter","GLOBAL",%bg2_chapter_7%) InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @146
 END
 
 I_C_T GORAPP1 6 LK#N_gorapp1
-== LK#NE25J IF ~GlobalGT("chapter","GLOBAL",7) InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @147
+== LK#NE25J IF ~GlobalGT("chapter","GLOBAL",%bg2_chapter_7%) InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @147
 END
 
 I_C_T GORAPP1 10 LK#N_gorapp12
-== LK#NE25J IF ~GlobalGT("chapter","GLOBAL",7) InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @148
+== LK#NE25J IF ~GlobalGT("chapter","GLOBAL",%bg2_chapter_7%) InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @148
 END
 
 I_C_T GORDEMO 1 LK#N_gordemo
-== LK#NE25J IF ~GlobalGT("chapter","GLOBAL",7) InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @149
+== LK#NE25J IF ~GlobalGT("chapter","GLOBAL",%bg2_chapter_7%) InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @149
 END
 
 I_C_T GORDEMO 24 LK#N_gordemo1
-== LK#NE25J IF ~GlobalGT("chapter","GLOBAL",7) InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @150
+== LK#NE25J IF ~GlobalGT("chapter","GLOBAL",%bg2_chapter_7%) InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @150
 END
 
 
 // Advice on Godhood
 INTERJECT_COPY_TRANS FINSOL01 27 LK#Nephele_FinSol
-  == LK#NE25J @151
+  == LK#NE25J IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @151
   = @152
 END
 
 
 // Post Decision Comment
 EXTEND_BOTTOM FINSOL01 29
-  IF ~InParty("Nephele") Global("LK#NephelePCGod","GLOBAL",0)~ THEN DO ~SetGlobal("LK#NephelePCGod","GLOBAL",1)~ EXTERN LK#NE25J LK#NephelePCGodNE
+  IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID) Global("LK#NephelePCGod","GLOBAL",0)~ THEN DO ~SetGlobal("LK#NephelePCGod","GLOBAL",1)~ EXTERN LK#NE25J LK#NephelePCGodNE
 END
 
 EXTEND_BOTTOM FINSOL01 30
-  IF ~InParty("Nephele") Global("LK#NephelePCGod","GLOBAL",0)~ THEN DO ~SetGlobal("LK#NephelePCGod","GLOBAL",1)~ EXTERN LK#NE25J LK#NephelePCGodNE
+  IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID) Global("LK#NephelePCGod","GLOBAL",0)~ THEN DO ~SetGlobal("LK#NephelePCGod","GLOBAL",1)~ EXTERN LK#NE25J LK#NephelePCGodNE
 END
 
 EXTEND_BOTTOM FINSOL01 31
-  IF ~InParty("Nephele") Global("LK#NephelePCGod","GLOBAL",0)~ THEN DO ~SetGlobal("LK#NephelePCGod","GLOBAL",1)~ EXTERN LK#NE25J LK#NephelePCGod
+  IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID) Global("LK#NephelePCGod","GLOBAL",0)~ THEN DO ~SetGlobal("LK#NephelePCGod","GLOBAL",1)~ EXTERN LK#NE25J LK#NephelePCGod
 END
 
 EXTEND_BOTTOM FINSOL01 32
-  IF ~InParty("Nephele") Global("LK#NephelePCNotGod","GLOBAL",0)~ THEN DO ~SetGlobal("LK#NephelePCNotGod","GLOBAL",1)~ EXTERN LK#NE25J LK#NephelePCNotGod
+  IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID) Global("LK#NephelePCNotGod","GLOBAL",0)~ THEN DO ~SetGlobal("LK#NephelePCNotGod","GLOBAL",1)~ EXTERN LK#NE25J LK#NephelePCNotGod
 END
 
 APPEND LK#NE25J
@@ -537,7 +537,7 @@ END
 
 // Volo
 EXTEND_TOP SARVOLO 9 #17
-  + ~InParty("Nephele")~ + @156 + LK#Nephele_Volo_0
+  + ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ + @156 + LK#Nephele_Volo_0
 END
 
 APPEND SARVOLO

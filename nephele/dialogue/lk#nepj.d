@@ -1288,79 +1288,79 @@ END
 // Nephele Interjections
 // ---------------------------------------------
 I_C_T AERIE 9 LK#N_aerie
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @479
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @479
 END
 
 I_C_T ARAN 49 LK#N_aran
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @480
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @480
 END
 
 I_C_T ARAN 53 LK#N_aran2
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @481
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @481
 END
 
 I_C_T ARAN 54 LK#N_aran3
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @482
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @482
 END
 
 I_C_T BOOTER 10 LK#N_booter
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @483
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @483
 END
 
 I_C_T ARNBOY01 0 LK#N_arnboy01
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @484
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @484
 END
 
 I_C_T ARNMAN01 4 LK#N_arnman01
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @485
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @485
   == LK#NEPJ @486
   == ARNMAN01 @487
   == LK#NEPJ @488
 END
 
 I_C_T BFTOWN1 2 LK#N_bftown01
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @489
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @489
 END
 
 I_C_T BHARVAL 17 LK#N_bharval
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @490
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @490
 END
 
 I_C_T BMERCH1 2 LK#N_bmerch1
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @491
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @491
 END
 
 I_C_T SAFE BMERCH1 3 LK#N_bmerch12
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @492
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @492
   == BMERCH1 @493
 END
 
 I_C_T BHOISIG 19 LK#N_bhoisig
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @490
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @490
 END
 
 I_C_T BODHI2 12 LK#N_bodhi2
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @494
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @494
 END
 
 I_C_T SAFE BOOTER02 0 LK#N_booter2
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @495
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @495
   == BOOTER02 @496
 END
 
 I_C_T SAFE BOY1 2 LK#N_boy1
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @497
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @497
   == BOY1 @498
   == LK#NEPJ @499
   == BOY1 @500
 END
 
 I_C_T BPROST1 2 LK#N_bprost2
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @501
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @501
 END
 
 CHAIN IF ~See("Nephele")
-InParty("Nephele")
+InParty("Nephele") 
 !StateCheck("Nephele",CD_STATE_NOTVALID)
 RandomNum(3,3)
 Global("brat2nephele","AR0700",0)~ THEN BRAT2 LK#N_brat2
@@ -1372,72 +1372,72 @@ DO ~SetGlobal("brat2nephele","AR0700",1)~
 EXIT
 
 I_C_T SAFE CERNDJ 56 LK#N_cernd
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @506
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @506
   == CERNDJ @507
 END
 
 I_C_T C6BODHI 0 LK#N_bodhi3
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @508
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @508
 END
 
 I_C_T C6CORAN 6 LK#N_coran
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @509
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @509
 END
 
 I_C_T C6DRIZZ1 1 LK#N_drizzt
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @510
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @510
 END
 
 I_C_T C6DRIZZ1 49 LK#N_drizzt7
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @510
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @510
 END
 
 I_C_T SAFE C6DRIZZ1 5 LK#N_drizzt2
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @511
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @511
   DO ~ChangeAIScript("",DEFAULT) SetLeavePartyDialogFile() LeaveParty() EscapeArea()~
   == C6DRIZZ1 @512
 END
 
 I_C_T SAFE C6DRIZZ1 41 LK#N_drizzt4
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @511
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @511
   DO ~ChangeAIScript("",DEFAULT) SetLeavePartyDialogFile() LeaveParty() EscapeArea()~
   == C6DRIZZ1 @512
 END
 
 I_C_T SAFE C6DRIZZ1 48 LK#N_drizzt6
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @511
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @511
   DO ~ChangeAIScript("",DEFAULT) SetLeavePartyDialogFile() LeaveParty() EscapeArea()~
   == C6DRIZZ1 @512
 END
 
 I_C_T C6REGIS1 2 LK#N_c6regis
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @513
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @513
 END
 
 I_C_T C6ELHAN2 10 LK#N_elhan
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @514
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @514
 END
 
 I_C_T C6ELHAN2 28 LK#N_elhan2
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @515
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @515
 END
 
 I_C_T SAFE C6ELHAN2 75 LK#N_elhan4
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @516
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @516
   == C6ELHAN2 @517
 END
 
 /*
 I_C_T3 CERNDJ 122 LK#N_cerndlol
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN ~I think you mean 'measure', dear.~
-  == CERNDJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN ~I have a cold, I'm afraid.~
-  == NALIAJ IF ~IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID) InParty("Nalia" !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN ~DON'T TRUST HER!~
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @8
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN ~I think you mean 'measure', dear.~
+  == CERNDJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN ~I have a cold, I'm afraid.~
+  == NALIAJ IF ~IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID) InParty("Nalia") See("Nalia")  !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN ~DON'T TRUST HER!~
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @8
 END
 */
 
 I_C_T C6ELHAN2 34 LK#N_elhan3
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @518
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @518
 END
 
 CHAIN IF ~See("Nephele")
@@ -1452,190 +1452,190 @@ DO ~SetGlobal("celvannephele","AR0300",1)~
 EXIT
 
 I_C_T CENANNY 11 LK#N_cenanny
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @522
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @522
 END
 
 I_C_T3 CERNDP 10 LK#N_cernd2
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @523
-  == CERNDP IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @524
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @525
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @526
-  == CERNDP IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @527
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @528
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @523
+  == CERNDP IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @524
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @525
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @526
+  == CERNDP IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @527
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @528
   == CERNDP @529
 END
 
 I_C_T DALESON 13 LK#N_daleson
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @530
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @530
 END
 
 I_C_T DBEGGAR2 7 LK#N_dbeggar
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @531
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @531
 END
 
 INTERJECT DELON 19 LK#N_delon
-  == LK#NEPJ IF ~!InParty("Minsc") InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @532
+  == LK#NEPJ IF ~!InParty("Minsc") InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @532
 COPY_TRANS DELON 8
 
 I_C_T SAFE DELCIA 16 LK#N_delcia
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @533
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @533
   == DELCIA @534
 END
 
 I_C_T EDWIN 8 LK#N_edwin
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @535
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @535
 END
 
 I_C_T SAFE EDWIN 49 LK#N_edwin2
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @536
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @536
   == EDWIN @537
 END
 
 I_C_T SAFE EDWINJ 180 LK#N_edwin4
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @538
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @538
   == EDWINJ @539
 END
 
 I_C_T SAFE EDWINJ 173 LK#N_edwin5
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @538
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @538
   == EDWINJ @539
 END
 
 INTERJECT ELGEA 0 LK#N_elgea
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @540
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @540
 COPY_TRANS ELGEA 1
 
 I_C_T FIRKRA01 3 LK#N_firkraag
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @541
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @541
 END
 
 I_C_T FIRKRA02 15 LK#N_firkraag2
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @542
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @542
 END
 
 I_C_T SAFE GARREN 29 LK#N_garren
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @543
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @543
   == GARREN @544
 END
 
 I_C_T SAFE GARREN 30 LK#N_garren2
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @543
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @543
   == GARREN @544
 END
 
 I_C_T SAFE GARREN 35 LK#N_garren3
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @545
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @545
   == GARREN @546
 END
 
 I_C_T SAFE GARREN 44 LK#N_garren4
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @547
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @547
   == GARREN @544
 END
 
 I_C_T SAFE GIRL2 5 LK#N_girl2
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @548
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @548
   == GIRL2 @549
 END
 
 I_C_T SAFE HAEGAN 1 LK#N_haegan
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @550
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @550
   == HAEGAN @551
 END
 
 I_C_T SAFE HAEGAN 2 LK#N_haegan
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @550
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @550
   == HAEGAN @551
 END
 
 I_C_T SAFE HAEGAN 3 LK#N_haegan
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @550
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @550
   == HAEGAN @551
 END
 
 I_C_T SAFE HAEGAN 5 LK#N_haegan
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @550
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @550
   == HAEGAN @551
 END
 
 I_C_T HENDAK 18 LK#N_hendak
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID) !Global("FreeSlaves","GLOBAL",1)~ THEN @552
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID) !Global("FreeSlaves","GLOBAL",1)~ THEN @552
 END
 
 I_C_T INSPECT 13 LK#N_inspect
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @553
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @553
 END
 
 I_C_T BARONP 47 LK#N_baronp
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @554
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @554
 END
 
 I_C_T TAT 0 LK#N_tat
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @555
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @555
 END
 
 I_C_T KELDORJ 11 LK#N_keldorn
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @556
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @556
 END
 
 I_C_T SAFE KELDORP 20 LK#N_keldorn2
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @557
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @557
   == KELDORP @558
 END
 
 I_C_T LEHTIN 27 LK#N_lehtinan3
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @559
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @559
 END
 
 I_C_T LISSA 4 LK#N_lissa
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @560
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @560
 END
 
 I_C_T MAEVAR 1 LK#N_maevar
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @561
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @561
 END
 
 I_C_T SAFE MAEVAR 42 LK#N_maevar2
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @562
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @562
   == MAEVAR @563
 END
 
 I_C_T MOURNER6 0 LK#N_mourner6
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @564
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @564
 END
 
 I_C_T MOURNER5 6 LK#N_mourner5
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @565
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @565
 END
 
 I_C_T WELLYN 7 LK#N_wellyn
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @566
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @566
 END
 
 I_C_T WELLYN 5 LK#N_wellyn2
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @567
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @567
 END
 
 I_C_T WELLYN 6 LK#N_wellyn3
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @567
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @567
 END
 
 I_C_T SAFE WELLYN 10 LK#N_wellyn4
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @568
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @568
   == WELLYN @569
 END
 
 I_C_T KELDORJ 46 LK#N_keldorn3
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @570
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @570
 END
 
 I_C_T SAFE KELDORJ 47 LK#N_keldorn4
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @557
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @557
   == KELDORJ @558
 END
 
 I_C_T MAZZYJ 4 LK#N_mazzy
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @571
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @571
 END
 
 CHAIN IF ~See("Nephele")
@@ -1649,11 +1649,11 @@ DO ~SetGlobal("murtlennephele","AR0700",1)~
 EXIT
 
 I_C_T NALIAJ 224 LK#N_nalia
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @574
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @574
 END
 
 I_C_T2 SAFE NEVAZIAH 21 LK#N_nevaziah
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @575
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @575
   == NEVAZIAH @576
 END
 
@@ -1670,16 +1670,16 @@ DO ~SetGlobal("PehllusNephele","LOCALS",1)~
 EXIT
 
 I_C_T PIRMUR10 3 LK#N_pirmur10
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @579
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @579
 END
 
 I_C_T PLAYER1 5 LK#N_player1
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @580
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @580
   = @581
 END
 
 EXTEND_BOTTOM PLAYER1 16
-  IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID) Global("LK#N_player11","GLOBAL",0)~ THEN DO ~SetGlobal("IrenicusBeat","AR2806",2)~ EXTERN LK#NEPJ LK#N_player11
+  IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID) Global("LK#N_player11","GLOBAL",0)~ THEN DO ~SetGlobal("IrenicusBeat","AR2806",2)~ EXTERN LK#NEPJ LK#N_player11
 END
 
 CHAIN LK#NEPJ LK#N_player11
@@ -1689,34 +1689,34 @@ DO ~SetGlobal("LK#N_player11","GLOBAL",1)~
 COPY_TRANS SAFE PLAYER1 16
 
 I_C_T PPIMOEN 1 LK#N_imoen
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @584
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @584
 END
 
 I_C_T PPIMOEN 5 LK#N_imoen2
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @585
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @585
 END
 
 I_C_T PPSAEM2 1 LK#N_ppsaemon3
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @586
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @586
 END
 
 I_C_T PPSAEM2 24 LK#N_ppsaemon4
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @587
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @587
 END
 
 I_C_T PPDILI 0 LK#N_ppdili
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @588
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @588
 END
 
 INTERJECT PIRCOR02 1 LK#N_ginia
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @589
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @589
   == PIRCOR02 @590
   == LK#NEPJ @591
   = @592
 COPY_TRANS PIRCOR02 2
 
 I_C_T YOSHJ 113 LK#N_yoshj
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @593
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @593
 END
 
 CHAIN IF ~InParty("Nephele")
@@ -1738,84 +1738,84 @@ DO ~SetGlobal("QuayleNephele","LOCALS",1)~
 EXIT
 
 I_C_T SAHBEH01 0 LK#N_sahbeh01
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @605
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @605
 END
 
 I_C_T SAHBAR03 1 LK#N_sahbar03
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @606
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @606
 END
 
 I_C_T SAFE SBWENCH 9 LK#N_sbwench
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @607
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @607
   == EDWINJ @608
 END
 
 I_C_T SLHALF02 2 LK#N_slhalf02
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @609
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @609
 END
 
 I_C_T SPOILED1 3 LK#N_spoiled1
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @610
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @610
 END
 
 I_C_T SUDEMIN 11 LK#N_sudemin
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @611
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @611
 END
 
 /*
 I_C_T2 SUJON 14 LK#N_sujon
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN ~We will make you suffer for what you have taken, you bastard! Enjoy the fiery pits of hell!~
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN ~We will make you suffer for what you have taken, you bastard! Enjoy the fiery pits of hell!~
 END
 */ 
 
 I_C_T SAFE TANNER 18 LK#N_tanner
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @612
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @612
   == TANNER @613
 END
 
 I_C_T TIANA 1 LK#N_tiana
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @614
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @614
 END
 
 I_C_T TIRDIR 2 LK#N_tirdir
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @615
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @615
 END
 
 I_C_T TOLGER 80 LK#N_tolger
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @616
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @616
 END
 
 I_C_T TRSKIN02 16 LK#N_trskin02
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @617
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @617
 END
 
 I_C_T SAFE VALYGAR 28 LK#N_valygar
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @618
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @618
   DO ~DropInventory() LeaveParty() SetGlobal("LK#NepheleJoined","LOCALS",0) EscapeArea()~
   == VALYGAR @619
 END
 
 I_C_T VALYGARJ 111 LK#N_valygar2
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @620
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @620
 END
 
 I_C_T VICONI 2 LK#N_viconia
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @621
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @621
 END
 
 // Bodhi
 INTERJECT_COPY_TRANS BODHI 1 LK#N_BodhiIntro
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN
   @622
 END
 
 I_C_T BODHI 6 LK#N_BodhiWarn
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN
   @623
 END
 
 INTERJECT_COPY_TRANS BODHI 18 LK#N_BodhiLeave
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN
   @624
   DO ~ChangeAIScript("",DEFAULT) SetLeavePartyDialogFile() LeaveParty() EscapeArea()~
 END
@@ -1843,32 +1843,32 @@ END
 
 // Adalon
 INTERJECT UDSILVER 9 LK#NepheleAdalon
-  == LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @627
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @627
 END UDSILVER 58
 
 
 // In Hell
 I_C_T PLAYER1 25 LK#Nep_Hell
-  == LK#NEPJ IF ~IsValidForPartyDialog("Nephele")~ THEN @628
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @628
   = @629
 END
 
 
 // Irenicus in Hell
 I_C_T HELLJON 7 LK#Nep_Iren
-  == LK#NEPJ IF ~IsValidForPartyDialog("Nephele")~ THEN @630
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @630
 END
 
 I_C_T HELLJON 8 LK#Nep_Iren1
-  == LK#NEPJ IF ~IsValidForPartyDialog("Nephele")~ THEN @630
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @630
 END
 
 I_C_T HELLJON 9 LK#Nep_Iren2
-  == LK#NEPJ IF ~IsValidForPartyDialog("Nephele")~ THEN @630
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @630
 END
 
 I_C_T HELLJON 10 LK#Nep_Iren3
-  == LK#NEPJ IF ~IsValidForPartyDialog("Nephele")~ THEN @630
+  == LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @630
 END
 
 
@@ -1901,96 +1901,96 @@ END
 
 // new interjections - 22/1/2011
 I_C_T UHGIRL01 2 LK#N_uhgirl02
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @637
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @637
 END
 
 I_C_T UHGIRL01 9 LK#N_uhgirl022
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @638
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @638
 END
 
 I_C_T SAFE JUGDAR01 2 LK#N_jugdar01
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @639
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @639
 DO ~SetGlobal("TalkedToDaar","GLOBAL",1)~
 END
 
 I_C_T JUGJER01 32 LK#N_jugjer01
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @640
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @640
 END
 
 I_C_T UHKID01 2 LK#N_uhkid01
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @641
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @641
 END
 
 I_C_T UHKID02 2 LK#N_uhkid02
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @642
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @642
 END
 
 I_C_T UHKID03 3 LK#N_uhkid03
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @643
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @643
 END
 
 I_C_T UHKID02 7 LK#N_uhkid022
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @644
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @644
 END
 
 I_C_T UHKID03 11 LK#N_uhkid031
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @645
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @645
 END
 
 I_C_T UHKID03 12 LK#N_uhkid032
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @645
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @645
 END
 
 I_C_T UHKID02 11 LK#N_uhkid023
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @645
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @645
 END
 
 I_C_T UHKID01 14 LK#N_uhkid011
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @646
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @646
 END
 
 I_C_T UHKID03 14 LK#N_uhkid032
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @647
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @647
 END
 
 I_C_T UHKID03 15 LK#N_uhkid033
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @648
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @648
 END
 
 I_C_T UHOGRE01 6 LK#N_uhogre01
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @649
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @649
 END
 
 I_C_T SEWERM1 8 LK#N_sewerm1
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @650
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @650
 END
 
 I_C_T CLKID 1 LK#N_clkid1
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @651
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @651
 END
 
 I_C_T CLMOM 8 LK#N_clmom
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @652
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @652
 END
 
 I_C_T CLMOM 11 LK#N_clmom2
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @653
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @653
 END
 
 I_C_T NALIAJ 224 LK#N_naliaj2
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @654
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @654
 END
 
 I_C_T NALIAJ 59 LK#N_naliaj3
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @655
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @655
 END
 
 I_C_T NALIAJ 60 LK#N_naliaj3
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @656
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @656
 END
 
 I_C_T SAFE PLAYER1 3 LK#N_player122
-== LK#NEPJ IF ~InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @657
+== LK#NEPJ IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @657
 = @658
 DO ~SetGlobal("SelfTalk","GLOBAL",2)~
 END
@@ -1998,21 +1998,21 @@ END
 // Watcher's Keep interjections
 
 I_C_T FSSPIR2 1 LK#N_fsspir2
-== LK#NEPJ IF ~GlobalLT("chapter","GLOBAL",8) InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @659
+== LK#NEPJ IF ~GlobalLT("chapter","GLOBAL",%bg2_chapter_8%) InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @659
 END
 
 I_C_T GORAPP1 6 LK#N_gorapp1
-== LK#NEPJ IF ~GlobalLT("chapter","GLOBAL",8) InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @660
+== LK#NEPJ IF ~GlobalLT("chapter","GLOBAL",%bg2_chapter_8%) InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @660
 END
 
 I_C_T GORAPP1 10 LK#N_gorapp12
-== LK#NEPJ IF ~GlobalLT("chapter","GLOBAL",8) InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @661
+== LK#NEPJ IF ~GlobalLT("chapter","GLOBAL",%bg2_chapter_8%) InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @661
 END
 
 I_C_T GORDEMO 1 LK#N_gordemo
-== LK#NEPJ IF ~GlobalLT("chapter","GLOBAL",8) InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @662
+== LK#NEPJ IF ~GlobalLT("chapter","GLOBAL",%bg2_chapter_8%) InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @662
 END
 
 I_C_T GORDEMO 24 LK#N_gordemo1
-== LK#NEPJ IF ~GlobalLT("chapter","GLOBAL",8) InParty("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @663
+== LK#NEPJ IF ~GlobalLT("chapter","GLOBAL",%bg2_chapter_8%) InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @663
 END

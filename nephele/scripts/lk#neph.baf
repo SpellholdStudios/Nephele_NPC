@@ -28,7 +28,6 @@ IF
     See(Player1)
     !StateCheck("Nephele",CD_STATE_NOTVALID)
     !StateCheck(Player1,CD_STATE_NOTVALID)
-    RealGlobalTimerExpired("LK#NephFriendTalksTimer","GLOBAL")
     CombatCounter(0)
     !See([ENEMY])
     OR(7)
@@ -48,6 +47,10 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !See([ENEMY])
     RealGlobalTimerExpired("LK#NephFriendTalksTimer","GLOBAL")
     OR(5)
       Global("LK#NephFriendTalks","GLOBAL",1)
@@ -65,6 +68,8 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    CombatCounter(0)
+    !Detect([ENEMY])
     Global("PlayerLooksLikeDrow","GLOBAL",1)
     Global("LK#NephFriendTalks_drow","GLOBAL",0)
 THEN
@@ -77,6 +82,10 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !See([ENEMY])
     Global("PlayerLooksLikeDrow","GLOBAL",1)
     OR(2)
       Global("LK#NephFriendTalks","GLOBAL",9)
@@ -93,6 +102,8 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    CombatCounter(0)
+    !Detect([ENEMY])
     AreaCheck("AR2500")
     GlobalGT("LK#NephFriendTalks","GLOBAL",8)
     GlobalLT("LK#NephFriendTalks","GLOBAL",13)
@@ -107,6 +118,8 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    CombatCounter(0)
+    !Detect([ENEMY])
     AreaCheck("AR2800")
     Global("LK#NephFriendTalks","GLOBAL",15)
     Global("LK#NephFriendTalks_suld","GLOBAL",0)
@@ -119,6 +132,10 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !See([ENEMY])
     Global("LK#NephFriendTalks_suld","GLOBAL",1)
     Global("LK#NephFriendTalks","GLOBAL",15)
     RealGlobalTimerExpired("LK#NephFriendTalksTimer","GLOBAL")
@@ -132,7 +149,6 @@ IF
     See(Player1)
     !StateCheck("Nephele",CD_STATE_NOTVALID)
     !StateCheck(Player1,CD_STATE_NOTVALID)
-    RealGlobalTimerExpired("LK#NephFriendTalksTimer","GLOBAL")
     !Detect([ENEMY])
     Global("LK#NephFriendTalks","GLOBAL",16)
 THEN
@@ -174,6 +190,10 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !See([ENEMY])
     Global("LK#NepheleSpellTalk","GLOBAL",1)
     RealGlobalTimerExpired("LK#NepheleSpellTalkTimer","GLOBAL")
 THEN
@@ -186,7 +206,6 @@ IF
     See(Player1)
     !StateCheck("Nephele",CD_STATE_NOTVALID)
     !StateCheck(Player1,CD_STATE_NOTVALID)
-    RealGlobalTimerExpired("LK#NepheleSpellTalkTimer","GLOBAL")
     CombatCounter(0)
     !Detect([ENEMY])
     Global("LK#NepheleSpellTalk","GLOBAL",2)
@@ -202,9 +221,11 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    CombatCounter(0)
+    !Detect([ENEMY])
     GlobalGT("LK#NephFriendTalks","GLOBAL",8)
     Global("LK#NepheleCooking","GLOBAL",0)
-    !Global("chapter","GLOBAL",5)
+    !Global("chapter","GLOBAL",%bg2_chapter_5%)
 THEN
   RESPONSE #100
     SetGlobal("LK#NepheleCooking","GLOBAL",1)
@@ -214,6 +235,8 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    CombatCounter(0)
+    !Detect([ENEMY])
     Global("LK#NepheleCooking","GLOBAL",1)
     RealGlobalTimerExpired("LK#NepheleCookingTimer","GLOBAL")
 THEN
@@ -226,6 +249,10 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
     CheckStatGT("Nephele",20,INTOXICATION)
     Global("LK#NepheleDrunkTalk","GLOBAL",0)
 THEN
@@ -252,6 +279,8 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    CombatCounter(0)
+    !Detect([ENEMY])
     GlobalGT("BodhiAppear","GLOBAL",2)
     Global("LK#NepheleVampiresTalk","GLOBAL",0)
 THEN
@@ -263,6 +292,10 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
     Global("LK#NepheleVampiresTalk","GLOBAL",1)
     RealGlobalTimerExpired("LK#NepheleVampiresTalkTimer","GLOBAL")
 THEN
@@ -290,6 +323,8 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    CombatCounter(0)
+    !Detect([ENEMY])
     AreaCheck("AR1512")
     Global("LK#NepheleYoshimoBetrayal","GLOBAL",0)
 THEN
@@ -301,6 +336,10 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
     Global("LK#NepheleYoshimoBetrayal","GLOBAL",1)
     RealGlobalTimerExpired("LK#NepheleYoshimoBetrayalTimer","GLOBAL")
 THEN
@@ -313,7 +352,7 @@ IF
     See(Player1)
     !StateCheck("Nephele",CD_STATE_NOTVALID)
     !StateCheck(Player1,CD_STATE_NOTVALID)
-    RealGlobalTimerExpired("LK#NepheleYoshimoBetrayalTimer","GLOBAL")
+    CombatCounter(0)
     !Detect([ENEMY])
     Global("LK#NepheleYoshimoBetrayal","GLOBAL",2)
 THEN
@@ -327,6 +366,8 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    CombatCounter(0)
+    !Detect([ENEMY])
     Global("ViconiaRomanceActive","GLOBAL",2)
     Global("LK#NepheleViconiaRomance","GLOBAL",0)
 THEN
@@ -338,6 +379,10 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
     Global("ViconiaRomanceActive","GLOBAL",2)
     Global("LK#NepheleViconiaRomance","GLOBAL",1)
     RealGlobalTimerExpired("LK#NepheleViconiaRomanceTimer","GLOBAL")
@@ -351,8 +396,7 @@ IF
     See(Player1)
     !StateCheck("Nephele",CD_STATE_NOTVALID)
     !StateCheck(Player1,CD_STATE_NOTVALID)
-    Global("ViconiaRomanceActive","GLOBAL",2)
-    RealGlobalTimerExpired("LK#NepheleViconiaRomanceTimer","GLOBAL")
+    CombatCounter(0)
     !Detect([ENEMY])
     Global("LK#NepheleViconiaRomance","GLOBAL",2)
 THEN
@@ -367,7 +411,7 @@ IF
     InParty(Myself)
     See(Player1)
     AreaCheck("AR0700")
-    GlobalGT("chapter","GLOBAL",5)
+    GlobalGT("chapter","GLOBAL",%bg2_chapter_5%)
     Global("LK#NepheleWPTalk","GLOBAL",0)
 THEN
   RESPONSE #100
@@ -378,6 +422,10 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
     AreaCheck("AR0700")
     Global("LK#NepheleWPTalk","GLOBAL",1)
     RealGlobalTimerExpired("LK#NepheleWPTalkTimer","GLOBAL")
@@ -391,8 +439,6 @@ IF
     See(Player1)
     !StateCheck("Nephele",CD_STATE_NOTVALID)
     !StateCheck(Player1,CD_STATE_NOTVALID)
-    AreaCheck("AR0700")
-    RealGlobalTimerExpired("LK#NepheleWPTalkTimer","GLOBAL")
     CombatCounter(0)
     !Detect([ENEMY])
     Global("LK#NepheleWPTalk","GLOBAL",2)
@@ -407,6 +453,8 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    CombatCounter(0)
+    !Detect([ENEMY])
     GlobalGT("LK#NepheleAnnoyed","GLOBAL",2)
     Global("LK#NepheleInsultedTalk","GLOBAL",0)
 THEN
@@ -418,6 +466,10 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
     Global("LK#NepheleInsultedTalk","GLOBAL",1)
     RealGlobalTimerExpired("LK#NepheleInsultedTalkTimer","GLOBAL")
 THEN
@@ -430,7 +482,6 @@ IF
     See(Player1)
     !StateCheck("Nephele",CD_STATE_NOTVALID)
     !StateCheck(Player1,CD_STATE_NOTVALID)
-    RealGlobalTimerExpired("LK#NepheleInsultedTalkTimer","GLOBAL")
     CombatCounter(0)
     !Detect([ENEMY])
     Global("LK#NepheleInsultedTalk","GLOBAL",2)
@@ -444,6 +495,10 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
     GlobalGT("LK#NepheleAnnoyed","GLOBAL",4)
     Global("LK#NepheleInsultedTalk2","GLOBAL",0)
 THEN
@@ -478,8 +533,7 @@ IF
     Global("LK#NepheleNalia","GLOBAL",1)
 THEN
   RESPONSE #100
-    ActionOverride("Nalia",SetGlobal("LK#NepheleNalia","GLOBAL",2))
-    ActionOverride("Nephele",SetGlobal("LK#NepheleNalia","GLOBAL",2))
+    SetGlobal("LK#NepheleNalia","GLOBAL",2)
 END
 
 IF
@@ -502,6 +556,10 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
     !Range("aran",30)
     Global("AranJob","GLOBAL",1)
     Global("LK#NepheleAran","GLOBAL",0)
@@ -529,6 +587,8 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    CombatCounter(0)
+    !Detect([ENEMY])
     Global("LassalVampires","GLOBAL",3)
     !Range("bodhi2",30)
     !Detect("bodhi2")
@@ -542,6 +602,10 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
     !Range("bodhi2",30)
     !Detect("bodhi2")
     Global("LK#NepheleBodhi","GLOBAL",1)
@@ -556,7 +620,6 @@ IF
     See(Player1)
     !StateCheck("Nephele",CD_STATE_NOTVALID)
     !StateCheck(Player1,CD_STATE_NOTVALID)
-    RealGlobalTimerExpired("LK#NepheleBodhiTimer","GLOBAL")
     CombatCounter(0)
     !Detect([ENEMY])
     Global("LK#NepheleBodhi","GLOBAL",2)
@@ -571,6 +634,10 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
     !Range("saemon",30)
     Global("AsylumPlot","GLOBAL",3)
     Global("LK#NepheleSaemon","GLOBAL",0)
@@ -598,6 +665,8 @@ END
  IF
     InParty(Myself)
     See(Player1)
+    CombatCounter(0)
+    !Detect([ENEMY])
     AreaCheck("AR2500")
     Global("LK#NepheleEscapedUnderdark","GLOBAL",0)
 THEN
@@ -609,6 +678,10 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
     Global("LK#NepheleEscapedUnderdark","GLOBAL",1)
     RealGlobalTimerExpired("LK#NepheleEscapedUnderdarkTimer","GLOBAL")
 THEN
@@ -621,7 +694,6 @@ IF
     See(Player1)
     !StateCheck("Nephele",CD_STATE_NOTVALID)
     !StateCheck(Player1,CD_STATE_NOTVALID)
-    RealGlobalTimerExpired("LK#NepheleEscapedUnderdarkTimer","GLOBAL")
     CombatCounter(0)
     !Detect([ENEMY])
     Global("LK#NepheleEscapedUnderdark","GLOBAL",2)
@@ -636,6 +708,10 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
     Dead("c6bodhi")
     Global("LK#NepheleBodhiDead","GLOBAL",0)
 THEN
@@ -662,6 +738,10 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
     InParty("edwin")
     Global("LK#NepheleEdwinTalk","GLOBAL",0)
 THEN
@@ -687,6 +767,10 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
     Global("PlanarPrison","GLOBAL",2)
     InParty("haerdalis")
     Global("LK#NepheleHaerdalisTalk","GLOBAL",0)
@@ -713,6 +797,10 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
     Global("HendakReleased","AR0406",3)
     !Global("FreeSlaves","GLOBAL",1)
     AreaCheck("AR0406")
@@ -741,6 +829,10 @@ END
 IF
     InParty(Myself)
     See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
     Global("RenalJob","GLOBAL",1)
     !Range("renal",30)
     !Detect("renal")
@@ -769,6 +861,8 @@ END
 IF
     XPGT("Nephele",3825000)
     Global("LK#NepheleHolySymbol","GLOBAL",0)
+    CombatCounter(0)
+    !Detect([ENEMY])
 THEN
   RESPONSE #100
     ActionOverride("Nephele",CreateItem("LK#NEPH",0,0,0))

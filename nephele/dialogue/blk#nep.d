@@ -488,7 +488,7 @@ EXIT
 CHAIN IF WEIGHT #-1
 ~Global("LK#NepheleNalia","GLOBAL",2)~ THEN NALIAJ LK#NepheleNalia_2
 @179
-DO ~SetGlobal("LK#NepheleNalia","GLOBAL",2)~
+DO ~SetGlobal("LK#NepheleNalia","GLOBAL",3)~
 == LK#NEPJ @180
 == NALIAJ @181
 == LK#NEPJ @182

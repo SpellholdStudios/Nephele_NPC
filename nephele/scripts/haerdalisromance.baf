@@ -1,0 +1,35 @@
+// Comment on Haer'Dalis romance
+IF
+    InParty(Myself)
+    See(Player1)
+    Global("LS_HaerdalisRomanceActive","GLOBAL",1)
+    GlobalGT("LS_HaerDalisLovetalks","GLOBAL",21)
+    Global("LK#Neph_haerdalisromance","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("LK#Neph_haerdalisromanceTimer","GLOBAL",900)
+    SetGlobal("LK#Neph_haerdalisromance","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    Global("LK#Neph_haerdalisromance","GLOBAL",1)
+    RealGlobalTimerExpired("LK#Neph_haerdalisromanceTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("LK#Neph_haerdalisromance","GLOBAL",2)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    !Detect([ENEMY])
+    Global("LK#Neph_haerdalisromance","GLOBAL",2)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END

@@ -1,0 +1,173 @@
+// ---------------------------------------------
+// Nephele Script
+// ---------------------------------------------
+
+// Initial meeting
+IF
+    Global("LK#NepheleSummoned","GLOBAL",1)
+    Global("LK#NepheleToBIntro","GLOBAL",0)
+THEN
+  RESPONSE #100
+    Dialogue(Player1)
+END
+
+
+// Dialogues
+IF
+    InParty(Myself)
+    Global("LK#NephToBFriendTalks","GLOBAL",0)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("LK#NephToBFriendTalksTimer","GLOBAL",1800)
+    SetGlobal("LK#NephToBFriendTalks","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    RealGlobalTimerExpired("LK#NephToBFriendTalksTimer","GLOBAL")
+    CombatCounter(0)
+    !See([ENEMY])
+    OR(3)
+      Global("LK#NephToBFriendTalks","GLOBAL",2)
+      Global("LK#NephToBFriendTalks","GLOBAL",6)
+      Global("LK#NephToBFriendTalks","GLOBAL",8)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    RealGlobalTimerExpired("LK#NephToBFriendTalksTimer","GLOBAL")
+    OR(3)
+      Global("LK#NephToBFriendTalks","GLOBAL",1)
+      Global("LK#NephToBFriendTalks","GLOBAL",5)
+      Global("LK#NephToBFriendTalks","GLOBAL",7)
+THEN
+  RESPONSE #100
+    IncrementGlobal("LK#NephToBFriendTalks","GLOBAL",1)
+END
+
+
+// Saradush talk
+IF
+    InParty(Myself)
+    See(Player1)
+    Global("SaradushSacked","GLOBAL",1)
+    Global("LK#NephToBFriendTalks","GLOBAL",3)
+    Global("LK#NephToBFriendTalks_saradush","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("LK#NephToBFriendTalksTimer","GLOBAL",1800)
+    SetGlobal("LK#NephToBFriendTalks_saradush","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    Global("LK#NephToBFriendTalks_saradush","GLOBAL",1)
+    Global("LK#NephToBFriendTalks","GLOBAL",3)
+    RealGlobalTimerExpired("LK#NephToBFriendTalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("LK#NephToBFriendTalks","GLOBAL",4)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    RealGlobalTimerExpired("LK#NephToBFriendTalksTimer","GLOBAL")
+    CombatCounter(0)
+    !See([ENEMY])
+    Global("LK#NephToBFriendTalks","GLOBAL",4)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+
+// Other minor talks/comments
+
+// Balthazar
+IF
+    InParty(Myself)
+    See(Player1)
+    Global("METBAL","GLOBAL",1)
+    !Range("balth",30)
+    !Detect("balth")
+    Global("LK#NepheleToBBalthazar","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#NepheleToBBalthazar","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
+    Global("LK#NepheleToBBalthazar","GLOBAL",1)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+
+// Balthazar dead, truth about Melissan
+ IF
+    InParty(Myself)
+    See(Player1)
+    Global("TalkedToSolar","GLOBAL",6)
+    Global("LK#NepheleToBMel","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#NepheleToBMel","GLOBAL",1)
+    RealSetGlobalTimer("LK#NepheleToBMelTimer","GLOBAL",60)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    Global("LK#NepheleToBMel","GLOBAL",1)
+    RealGlobalTimerExpired("LK#NepheleToBMelTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("LK#NepheleToBMel","GLOBAL",2)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Nephele",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    RealGlobalTimerExpired("LK#NepheleToBMelTimer","GLOBAL")
+    CombatCounter(0)
+    !Detect([ENEMY])
+    Global("LK#NepheleToBMel","GLOBAL",2)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+
+// Replace Holy Symbol
+IF
+    XPGT("Nephele",3825000)
+    Global("LK#NepheleHolySymbol","GLOBAL",0)
+THEN
+  RESPONSE #100
+    ActionOverride("Nephele",CreateItem("LK#NEPH",0,0,0))
+    SetGlobal("LK#NepheleHolySymbol","GLOBAL",1)
+END

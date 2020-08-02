@@ -1,0 +1,107 @@
+@0    = ~2.1~
+@1    = ~Nephele NPC Mod for BGII: SoA & ToB~
+@2    = ~ToB is not installed! Please install the Throne of Bhaal expansion before installing Nephele.~
+@3    = ~Cleric of Yondalla~
+@4    = ~Cleric of Yondalla
+
+CLERIC OF YONDALLA: Yondalla is the creator of the halfling race and matriarch of not only the halfling pantheon, but of the whole race itself. With her charming personality and friendly demeanor she is an example to all halflings, who share her curiosity, loyalty and sense of mischief. Despite her widespread worship among halflings and her central role in their society, her temples are unusually rare. Those that do exist are designed to look like a well-hidden halfling burrow-home, and are filled with weapons and food so that the communities that surround them can hold out against possible invaders. Her clergy are afforded much respect by the followers of other gods for their defensive capabilities in spite of their small stature.
+
+ADVANTAGES:
+May cast "Yondalla's Good Berries" once a day
+At level 10 is given "Yondalla's Embrace", which works like the "Entangle" druid spell
+At level 12 is given "Yondalla's Breath", which works like the "Zone of Sweet Air" cleric spell
+
+DISADVANTAGES:
+Restricted to halflings
+Restricted to Lawful/Neutral Good and Lawful Neutral characters~
+@5    = ~Nephele~
+@6    = ~Nephele Samios~
+@7    = ~When asked about her past, NEPHELE closes her eyes briefly, a small smile on her wrinkled face.  Raised in the halfling village of Larrikin, she joined the church of Yondalla in her mid-twenties, and though she has always been a devout follower of her goddess, she was never quite content with the home-life of many halflings.  "Cursed with wanderlust," she says, a sparkle in her eyes.  She jumped at the chance to help the occasional adventurer, and began her travels aiding the wounded and injured, eventually becoming quite the formidable adventurer herself.  She married and returned to Larrikin, where she "brought seven wonders" into the world.  Her smile broadens as she tells you of her children, pride evident in her voice.  After her children were grown she set out adventuring once more.  Something in her eyes tells you that there is more to the story, but she squeezes your shoulder cheerfully and walks away, humming under her breath.~
+@8    = ~Sorry, dear, but something's just not right!~ []
+@9    = ~Alright, let's get this group into order!~ []
+@10   = ~These old legs aren't quite as strong as yours, dear; I need to sit down!~ []
+@11   = ~How about a story?  No?  I suppose I'll just have to entertain myself, then.~ []
+@12   = ~For Yondalla!~ []
+@13   = ~Meet your Gods!~ []
+@14   = ~No mercy for the wicked!~ []
+@15   = ~How dare you!~ []
+@16   = ~Die!~ []
+@17   = ~It has been a good... life...~ []
+@18   = ~Dear, I think I could do with some healing...~ []
+@19   = ~You know, however many times I go underground, I never seem to avoid walking into cobwebs. Urgh.~ []
+@20   = ~Yondalla's sweet breath, you startled me.~ []
+@21   = ~Yes, dear?~ []
+@22   = ~Can I help you?~ []
+@23   = ~What is it?~ []
+@24   = ~Hmm?~ []
+@25   = ~What?!~ []
+@26   = ~Of course.~ []
+@27   = ~If you'd like.~ []
+@28   = ~I'd be happy to.~ []
+@29   = ~Are you sure?~ []
+@30   = ~Must I?~ []
+@31   = ~If it will help.~ []
+@32   = ~At once.~ []
+@33   = ~I've had seven children, dear, do you really think prodding me is going to do you any good whatsoever?~ []
+@34   = ~There's no need to paw at me, dear.~[]
+@35   = ~Yes!~ []
+@36   = ~Gods-curse you!~ []
+@37   = ~This weapon isn't exactly effective, dear!~ []
+@38   = ~<CHARNAME>, I'm an old woman. I can't carry that much, I had to put it on the ground.~ []
+@39   = ~I'm proud of you, dear.~ []
+@40   = ~I'm not exactly happy with you right now, dear.~ []
+@41   = ~Alright, that's enough! It's time for you to shape up, dear, or I'm leaving!~ []
+@42   = ~Curse it! My spell failed!~ []
+@43   = ~The trap is set, dear.~ []
+@44   = ~Hidden away...~ []
+@45   = ~Aaand... got it. Phew.~ []
+@46   = ~Die!~[]
+@47   = ~Dear, I think I could do with some healing...~ []
+@48   = ~After Nephele's adventures with <CHARNAME>, she declared it was time for her to settle down again. She took on the role of grandmother once more, and spent many years amongst those she loved most. After her hundred and fiftieth birthday, however, she grew gravely ill. A feast was held in her honor, with appearances by many dignitaries, nobles and old friends Nephele had met in her long life, and it was to them the aging mother of seven gave her last speech. She spoke of her children, her beloved Davrin, her travels and of <CHARNAME>, the <PRO_MANWOMAN> she fondly recalled as her friend and <PRO_SONDAUGHTER> in everything but blood. She died a heroine, beloved by many whom she had shared her life with.~
+@49   = ~After Nephele's adventures with <CHARNAME>, she declared it was time for her to settle down again. She took on the role of grandmother once more, and spent many years amongst those she loved most. After her hundred and fiftieth birthday, however, she grew gravely ill. A feast was held in her honor, with appearances by many dignitaries, nobles and old friends Nephele had met in her long life, including her great friend, <CHARNAME>. It was to these the aged mother gave her last speech. She spoke of her children, her beloved Davrin, her travels and of <CHARNAME>, the <PRO_MANWOMAN> she fondly recalled as her friend and <PRO_SONDAUGHTER> in everything but blood. She died a heroine, beloved by many whom she had shared her life with.~
+@50   = ~Yondalla's Good Berries~
+@51   = ~Yondalla's Goodberries (Alteration, Evocation)
+Level: 2
+Sphere: Plant 
+Range: Touch 
+Duration: Permanent
+Casting Time: 1 round 
+Area of Effect: Special 
+Saving Throw: None 
+
+Casting a Goodberry spell creates 5 magical berries that the caster can carry with her. These berries cure one point of physical damage for each one eaten.~
+@52   = ~Yondalla's Embrace~
+@53   = ~Yondalla's Embrace (Alteration)
+Level: 1
+Sphere: Plant 
+Range: Visual range of caster 
+Duration: 1 turn 
+Casting Time: 4 
+Area of Effect: 40' radius
+Saving Throw: Neg 
+
+By means of this spell, the caster is able to cause plants in the area of effect to entangle creatures within the area. The grasses, weeds, bushes, and even trees wrap, twist, and entwine about the creatures, holding them fast for the duration of the spell.  A creature that rolls a successful saving throw vs. spell avoids entanglement.  All creatures have a +3 bonus to their saves.  An entangled creature can still attack.~
+@54   = ~Yondalla's Breath~
+@55   = ~Yondalla's Breath (Abjuration)
+Sphere: Wards
+Range: 30 yards
+Duration: Instant
+Casting Time: 3
+Area of Effect: Special
+Saving Throw: None
+
+Zone of Sweet Air repels all noxious elements from poisonous vapors (including magically created vapors such as Cloudkill).  This spell will dismiss all clouds in the entire area that the caster is currently in.  The spell offers no protection against poisonous vapors created by a dragon's breath weapon (such as the chlorine gas of a green dragon).~
+@56   = ~Holy symbol of Yondalla~
+@57   = ~Only the most worthy and devoted servants of the Yondalla are granted these powerful holy symbols.
+
+STATISTICS:
+
+   Grants an additional 6th and 7th level spell.
+   5% Magic Resistance while worn
+   May cast "Nature's beauty" once per day
+
+Usuable By:
+Nephele~
+@58   = ~Install Haer'Dalis Romance crossmod content~
+@59   = ~You do not appear to have Nephele installed~
+@60   = ~You do not appear to have the Haer'Dalis romance installed~

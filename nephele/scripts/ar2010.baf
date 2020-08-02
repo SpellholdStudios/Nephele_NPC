@@ -1,0 +1,8 @@
+IF
+    Global("LK#NepheleExists","GLOBAL",0)
+    GlobalGT("loganjob2","GLOBAL",1)    
+THEN
+  RESPONSE #100
+    SetGlobal("LK#NepheleExists","GLOBAL",1)
+    CreateCreature("lk#neph",[358.616],5)
+END

@@ -1,0 +1,291 @@
+// --------------------------------------------
+// Mod setup
+// --------------------------------------------
+// Basics
+BACKUP ~nephele/backup~
+AUTHOR ~K'aeloree (kae@spellholdstudios.net)~
+VERSION @0
+README ~nephele/nephele_readme.html~
+
+AUTO_TRA ~nephele/tra/%s~
+LANGUAGE ~English~
+         ~English~
+         ~nephele/tra/english/setup.tra~
+
+
+// --------------------------------------------
+// Nephele NPC Mod v1.0
+// --------------------------------------------
+// Component setup
+BEGIN @1
+  REQUIRE_FILE ~data/25dialog.bif~ @2
+  REQUIRE_FILE ~data/25scripts.bif~ @2
+
+
+// Adds custom IsValidForPartyDialogue state used throughout nephele
+APPEND ~STATE.IDS~ // adds custom IsValidForPartyDialogue state
+  ~0x80101FEF CD_STATE_NOTVALID~
+  UNLESS ~CD_STATE_NOTVALID~
+
+
+// Fixing Imoen's dialogue file
+ACTION_IF FILE_EXISTS_IN_GAME ~mel01.cre~ THEN BEGIN
+  COPY_EXISTING ~interdia.2da~ ~override~
+    SET_2DA_ENTRY 17 1 2 ~BIMOEN2~ // fixes ToB version
+    BUT_ONLY_IF_IT_CHANGES
+END ELSE BEGIN
+  APPEND ~interdia.2da~ ~IMOEN       BIMOEN2~ // fixes SoA version
+    UNLESS ~BIMOEN2~
+END
+
+
+// Fixpack ids fixes
+INCLUDE ~nephele/lib/ids.tph~
+INCLUDE ~nephele/lib/times.tph~
+CLEAR_IDS_MAP
+
+
+// Kit
+COPY ~nephele\2da\lk#neph.2da~ ~override~
+
+ADD_KIT ~lk#neph~
+~LK#Neph 0 0 0 0 0 0 0 0~ 
+~LK#Neph 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 1 1 0 0 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+~LK#Neph 0 0 0 0 9 0~ 
+~LK#Neph 0 0 0 0 0 0~ 
+~LK#Neph 0 0 0 0 0 0~ 
+~LK#Neph 0 0 0 0 0 0~
+~LK#Neph 1 1 0 1 0 0 0 0 0~ 
+~LK#Neph 0 0 0 0 0 0~ 
+~override\lk#neph.2da~
+~~
+~0x00100000 3~
+~Cl0~
+~PLAT04 * HELM07 BAG20 RING07 RING31 * BOOT01 AMUL20 BRAC09 BELT04 SW1H31 CLCK07 SHLD24 BAG02 BAG04 * * * *~ 
+SAY @3
+SAY @3 
+SAY @4
+
+
+// Copying images and creatures
+COPY ~nephele/images~ ~override~
+
+COPY ~nephele/creatures/lk#neph.cre~ ~override/lk#neph.cre~
+  SAY NAME1 @5
+  SAY NAME2 @6
+  WRITE_EVALUATED_ASCII DIALOG          ~%DEST_RES%~ #8
+  WRITE_EVALUATED_ASCII DEATHVAR        ~Nephele~ #32
+  WRITE_EVALUATED_ASCII SCRIPT_OVERRIDE ~%DEST_RES%~ #8
+  WRITE_LONG 0x18 190000
+  WRITE_BYTE  0x246 ~%lk#neph%~
+  ADD_CRE_ITEM ~slng02~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP
+  ADD_CRE_ITEM ~bull02~ #20 #0 #0 ~IDENTIFIED~ ~QUIVER1~
+  SAY BIO @7
+  SAY MORALE @8
+  SAY LEADER @9
+  SAY TIRED @10
+  SAY BORED @11
+  SAY BATTLE_CRY1 @12
+  SAY BATTLE_CRY2 @13
+  SAY BATTLE_CRY3 @14
+  SAY BATTLE_CRY4 @15
+  SAY BATTLE_CRY5 @16
+  SAY DYING @17
+  SAY HURT @18
+  SAY AREA_DUNGEON @19
+  SAY SELECT_COMMON1 @20
+  SAY SELECT_COMMON2 @21
+  SAY SELECT_COMMON3 @22
+  SAY SELECT_COMMON4 @23
+  SAY SELECT_COMMON5 @24
+  SAY SELECT_COMMON6 @25
+  SAY SELECT_ACTION1 @26
+  SAY SELECT_ACTION2 @27
+  SAY SELECT_ACTION3 @28
+  SAY SELECT_ACTION4 @29
+  SAY SELECT_ACTION5 @30
+  SAY SELECT_ACTION6 @31
+  SAY SELECT_ACTION7 @32
+  SAY SELECT_RARE1 @33
+  SAY SELECT_RARE2 @34
+  SAY CRITICAL_HIT @35
+  SAY CRITICAL_MISS @36
+  SAY TARGET_IMMUNE @37
+  SAY INVENTORY_FULL @38
+  SAY HAPPY @39
+  SAY UNHAPPY_ANNOYED @40
+  SAY UNHAPPY_SERIOUS @41
+  SAY SPELL_DISRUPTED @42
+  SAY SET_A_TRAP @43
+  SAY HIDDEN_IN_SHADOWS @44
+  SAY PICKED_POCKET @45
+
+
+COPY ~nephele/creatures/lk#neph.cre~ ~override/lk#ne25.cre~
+  SAY NAME1 @5
+  SAY NAME2 @6
+  WRITE_EVALUATED_ASCII DIALOG          ~%DEST_RES%~ #8
+  WRITE_EVALUATED_ASCII DEATHVAR        ~Nephele~ #32
+  WRITE_EVALUATED_ASCII SCRIPT_OVERRIDE ~%DEST_RES%~ #8
+  WRITE_LONG 0x18 2500000
+  WRITE_BYTE  0x246 ~%lk#neph%~
+  ADD_CRE_ITEM ~slng04~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP
+  ADD_CRE_ITEM ~bull05~ #20 #0 #0 ~IDENTIFIED~ ~QUIVER1~
+  SAY BIO @7
+  SAY MORALE @8
+  SAY LEADER @9
+  SAY TIRED @10
+  SAY BORED @11
+  SAY BATTLE_CRY1 @12
+  SAY BATTLE_CRY2 @13
+  SAY BATTLE_CRY3 @14
+  SAY BATTLE_CRY4 @15
+  SAY BATTLE_CRY5 @46
+  SAY DYING @17
+  SAY HURT @47
+  SAY AREA_DUNGEON @19
+  SAY SELECT_COMMON1 @20
+  SAY SELECT_COMMON2 @21
+  SAY SELECT_COMMON3 @22
+  SAY SELECT_COMMON4 @23
+  SAY SELECT_COMMON5 @24
+  SAY SELECT_COMMON6 @25
+  SAY SELECT_ACTION1 @26
+  SAY SELECT_ACTION2 @27
+  SAY SELECT_ACTION3 @28
+  SAY SELECT_ACTION4 @29
+  SAY SELECT_ACTION5 @30
+  SAY SELECT_ACTION6 @31
+  SAY SELECT_ACTION7 @32
+  SAY SELECT_RARE1 @33
+  SAY SELECT_RARE2 @34
+  SAY CRITICAL_HIT @35
+  SAY CRITICAL_MISS @36
+  SAY TARGET_IMMUNE @37
+  SAY INVENTORY_FULL @38
+  SAY HAPPY @39
+  SAY UNHAPPY_ANNOYED @40
+  SAY UNHAPPY_SERIOUS @41
+  SAY SPELL_DISRUPTED @42
+  SAY SET_A_TRAP @43
+  SAY HIDDEN_IN_SHADOWS @44
+  SAY PICKED_POCKET @45
+
+
+// Epilogues
+COPY ~nephele/epilogues/lk#neph1.2da~ ~override/lk#neph1.2da~
+   REPLACE ~99999~ @48
+
+COPY ~nephele/epilogues/lk#neph1.2da~ ~override/lk#neph2.2da~
+   REPLACE ~99999~ @49
+
+
+// Compiling dialogue...
+COMPILE ~nephele/dialogue/lk#neph.d~
+COMPILE ~nephele/dialogue/lk#nepj.d~
+COMPILE ~nephele/dialogue/blk#nep.d~
+COMPILE ~nephele/dialogue/lk#nepp.d~
+COMPILE ~nephele/dialogue/lk#ne25.d~
+COMPILE ~nephele/dialogue/lk#ne25j.d~
+COMPILE ~nephele/dialogue/blk#ne25.d~
+COMPILE ~nephele/dialogue/lk#ne25p.d~
+COMPILE ~nephele/dialogue/fatesp.d~
+
+
+// Compiling scripts...
+COMPILE ~nephele/scripts/lk#neph.baf~
+COMPILE ~nephele/scripts/lk#nepd.baf~
+COMPILE ~nephele/scripts/lk#ne25.baf~
+EXTEND_BOTTOM ~ar2010.bcs~ ~nephele/scripts/ar2010.baf~
+EXTEND_TOP ~ar6200.bcs~ ~nephele/scripts/ar6200.baf~
+
+
+// Adding talk condition to Yoshimo just in case...
+COPY_EXISTING ~yoshimox.dlg~ ~override~
+  DECOMPILE_DLG_TO_D
+    REPLACE_TEXTUALLY ~Enemy()~ ~SetGlobal("LK#NephYoshBetray","GLOBAL",1) Enemy()~
+  COMPILE_D_TO_DLG
+  BUT_ONLY_IF_IT_CHANGES
+
+// Appends
+APPEND ~interdia.2da~ ~Nephele BLK#NEP BLK#NE25~
+   UNLESS ~Nephele~
+
+APPEND ~pdialog.2da~ ~Nephele LK#NEPP LK#NEPJ LK#NEPD LK#NE25P LK#NE25J LK#NE25D LK#NE25~
+  UNLESS ~Nephele~
+
+
+
+// Spells
+
+// Good Berries
+
+COPY_EXISTING ~sppr207.spl~ ~override/lk#neph1.spl~           
+WRITE_SHORT 0x1C 4                        
+WRITE_LONG 0x34 1
+READ_LONG 0x64 "offset_abil"
+READ_SHORT  0x68 "num_abil"
+READ_ASCII ("%offset_abil%" + 0x04) "bam"            
+WRITE_EVALUATED_ASCII 0x3A "%bam%"                
+SAY NAME1 @50
+SAY NAME2 @50
+SAY UNIDENTIFIED_DESC @51
+SAY DESC @51
+WHILE (0 < "%num_abil%")
+BEGIN
+WRITE_SHORT (("%offset_abil%" + 0x02) + (("%num_abil%" - 1) * 0x28)) 4
+SET "num_abil" = ("%num_abil%" - 1)
+END 
+
+// Entangle
+
+COPY_EXISTING ~sppr105.spl~ ~override/lk#neph2.spl~           
+WRITE_SHORT 0x1C 4                        
+WRITE_LONG 0x34 1
+READ_LONG 0x64 "offset_abil"
+READ_SHORT  0x68 "num_abil"
+READ_ASCII ("%offset_abil%" + 0x04) "bam"            
+WRITE_EVALUATED_ASCII 0x3A "%bam%"                
+SAY NAME1 @52                           
+SAY NAME2 @52                           
+SAY UNIDENTIFIED_DESC @53
+SAY DESC @53
+WHILE (0 < "%num_abil%")
+BEGIN
+WRITE_SHORT (("%offset_abil%" + 0x02) + (("%num_abil%" - 1) * 0x28)) 4
+SET "num_abil" = ("%num_abil%" - 1)
+END
+
+// Zone of Sweet Air
+
+COPY_EXISTING ~sppr318.spl~ ~override/lk#neph3.spl~           
+WRITE_SHORT 0x1C 4                        
+WRITE_LONG 0x34 1
+READ_LONG 0x64 "offset_abil"
+READ_SHORT  0x68 "num_abil"
+READ_ASCII ("%offset_abil%" + 0x04) "bam"            
+WRITE_EVALUATED_ASCII 0x3A "%bam%"                
+SAY NAME1 @54
+SAY NAME2 @54
+SAY UNIDENTIFIED_DESC @55
+SAY DESC @55
+WHILE (0 < "%num_abil%")
+BEGIN
+WRITE_SHORT (("%offset_abil%" + 0x02) + (("%num_abil%" - 1) * 0x28)) 4
+SET "num_abil" = ("%num_abil%" - 1)
+END
+
+//Symbol
+
+COPY ~nephele/bams~ ~override~
+COPY ~nephele/items/lk#neph.itm~ ~override/lk#neph.itm~
+SAY NAME1 @56
+SAY NAME2 @56
+SAY DESC @57
+
+BEGIN @58
+  REQUIRE_COMPONENT ~setup-nephele.tp2~ ~0~ @59
+  REQUIRE_COMPONENT ~setup-haerdalisromance.tp2~ ~0~ @60
+
+COMPILE ~nephele/dialogue/haerdalisromance.d~
+EXTEND_BOTTOM ~lk#neph.bcs~ ~nephele/scripts/haerdalisromance.baf~

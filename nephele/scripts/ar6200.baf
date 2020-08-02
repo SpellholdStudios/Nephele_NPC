@@ -1,0 +1,25 @@
+// ---------------------------------------------
+// Nephele Epilogues
+// ---------------------------------------------
+
+IF
+    Global("StartEndBios","AR6200",1)
+    InParty("Nephele")
+    Global("LK#NepheleBio","GLOBAL",0)
+    !Global("PlayerChoseEssence","GLOBAL",1)
+    Global("LK#NephelePCFriends","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#NepheleBio","GLOBAL",1)
+    TextScreen("LK#NEPH1")
+END
+
+IF
+    Global("StartEndBios","AR6200",1)
+    InParty("Nephele")
+    Global("LK#NepheleBio","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#NepheleBio","GLOBAL",1)
+    TextScreen("LK#NEPH2")
+END

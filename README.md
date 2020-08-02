@@ -12,7 +12,7 @@
 
 **Author:** K'aeloree  
 **Mod Website:** <a href="http://www.spellholdstudios.net/ie/nephele">Spellhold Studios</a><br /><br />
-**Mod Forum:** <a href="http://www.shsforums.net/forum/608-nephele/">Arath NPC</a><br /><br />
+**Mod Forum:** <a href="http://www.shsforums.net/forum/608-nephele/">Nephele NPC</a><br /><br />
 
 
 <div align="center">

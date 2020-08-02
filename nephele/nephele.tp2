@@ -4,22 +4,21 @@
 // Basics
 BACKUP ~nephele/backup~
 AUTHOR ~K'aeloree (kae@spellholdstudios.net)~
-VERSION @0
+VERSION ~v2.2~
 README ~nephele/nephele_readme.html~
 
 AUTO_TRA ~nephele/tra/%s~
 LANGUAGE ~English~
-         ~English~
+         ~english~
          ~nephele/tra/english/setup.tra~
 
 
 // --------------------------------------------
-// Nephele NPC Mod v1.0
+// Nephele NPC Mod v2.2
 // --------------------------------------------
 // Component setup
 BEGIN @1
-  REQUIRE_FILE ~data/25dialog.bif~ @2
-  REQUIRE_FILE ~data/25scripts.bif~ @2
+  REQUIRE_PREDICATE GAME_IS ~bg2ee bgt tob~ @2
 
 
 // Adds custom IsValidForPartyDialogue state used throughout nephele
@@ -27,28 +26,27 @@ APPEND ~STATE.IDS~ // adds custom IsValidForPartyDialogue state
   ~0x80101FEF CD_STATE_NOTVALID~
   UNLESS ~CD_STATE_NOTVALID~
 
+ACTION_IF FILE_EXISTS_IN_GAME ~saradush.mve~ THEN BEGIN
+  // Fixing Imoen's dialogue file
+  ACTION_IF FILE_EXISTS_IN_GAME ~mel01.cre~ THEN BEGIN
+    COPY_EXISTING ~interdia.2da~ ~override~
+      SET_2DA_ENTRY 17 1 2 ~BIMOEN2~ // fixes ToB version
+      BUT_ONLY_IF_IT_CHANGES
+  END ELSE BEGIN
+    APPEND ~interdia.2da~ ~IMOEN       BIMOEN2~ // fixes SoA version
+      UNLESS ~BIMOEN2~
+  END
 
-// Fixing Imoen's dialogue file
-ACTION_IF FILE_EXISTS_IN_GAME ~mel01.cre~ THEN BEGIN
-  COPY_EXISTING ~interdia.2da~ ~override~
-    SET_2DA_ENTRY 17 1 2 ~BIMOEN2~ // fixes ToB version
-    BUT_ONLY_IF_IT_CHANGES
-END ELSE BEGIN
-  APPEND ~interdia.2da~ ~IMOEN       BIMOEN2~ // fixes SoA version
-    UNLESS ~BIMOEN2~
+  // Fixpack ids fixes
+  INCLUDE ~nephele/lib/ids.tph~
+  INCLUDE ~nephele/lib/times.tph~
+  CLEAR_IDS_MAP
 END
 
-
-// Fixpack ids fixes
-INCLUDE ~nephele/lib/ids.tph~
-INCLUDE ~nephele/lib/times.tph~
-CLEAR_IDS_MAP
-
-
 // Kit
-COPY ~nephele\2da\lk#neph.2da~ ~override~
+COPY ~nephele\2da\lkneph.2da~ ~override~
 
-ADD_KIT ~lk#neph~
+ADD_KIT ~lkneph~
 ~LK#Neph 0 0 0 0 0 0 0 0~ 
 ~LK#Neph 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 1 1 0 0 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
 ~LK#Neph 0 0 0 0 9 0~ 
@@ -57,7 +55,7 @@ ADD_KIT ~lk#neph~
 ~LK#Neph 0 0 0 0 0 0~
 ~LK#Neph 1 1 0 1 0 0 0 0 0~ 
 ~LK#Neph 0 0 0 0 0 0~ 
-~override\lk#neph.2da~
+~override\lkneph.2da~
 ~~
 ~0x00100000 3~
 ~Cl0~
@@ -66,9 +64,19 @@ SAY @3
 SAY @3 
 SAY @4
 
+ACTION_IF GAME_IS BG2EE THEN BEGIN
+
+  INCLUDE ~nephele/lib/cd_ee_kit_appends.tph~
+  LAUNCH_ACTION_FUNCTION ee_kit_appends STR_VAR class = "CLERIC" kitname = "lkneph" END
+
+END
 
 // Copying images and creatures
-COPY ~nephele/images~ ~override~
+ACTION_IF GAME_IS ~bg2ee~ BEGIN
+  COPY ~nephele/images/ee~ ~override~
+END ELSE BEGIN
+  COPY ~nephele/images/bg2~ ~override~
+END
 
 COPY ~nephele/creatures/lk#neph.cre~ ~override/lk#neph.cre~
   SAY NAME1 @5
@@ -77,7 +85,7 @@ COPY ~nephele/creatures/lk#neph.cre~ ~override/lk#neph.cre~
   WRITE_EVALUATED_ASCII DEATHVAR        ~Nephele~ #32
   WRITE_EVALUATED_ASCII SCRIPT_OVERRIDE ~%DEST_RES%~ #8
   WRITE_LONG 0x18 190000
-  WRITE_BYTE  0x246 ~%lk#neph%~
+  WRITE_BYTE  0x246 ~%lkneph%~
   ADD_CRE_ITEM ~slng02~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP
   ADD_CRE_ITEM ~bull02~ #20 #0 #0 ~IDENTIFIED~ ~QUIVER1~
   SAY BIO @7
@@ -128,7 +136,7 @@ COPY ~nephele/creatures/lk#neph.cre~ ~override/lk#ne25.cre~
   WRITE_EVALUATED_ASCII DEATHVAR        ~Nephele~ #32
   WRITE_EVALUATED_ASCII SCRIPT_OVERRIDE ~%DEST_RES%~ #8
   WRITE_LONG 0x18 2500000
-  WRITE_BYTE  0x246 ~%lk#neph%~
+  WRITE_BYTE  0x246 ~%lkneph%~
   ADD_CRE_ITEM ~slng04~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP
   ADD_CRE_ITEM ~bull05~ #20 #0 #0 ~IDENTIFIED~ ~QUIVER1~
   SAY BIO @7
@@ -220,7 +228,7 @@ APPEND ~pdialog.2da~ ~Nephele LK#NEPP LK#NEPJ LK#NEPD LK#NE25P LK#NE25J LK#NE25D
 
 // Good Berries
 
-COPY_EXISTING ~sppr207.spl~ ~override/lk#neph1.spl~           
+COPY_EXISTING ~sppr207.spl~ ~override/lkneph1.spl~
 WRITE_SHORT 0x1C 4                        
 WRITE_LONG 0x34 1
 READ_LONG 0x64 "offset_abil"
@@ -239,7 +247,7 @@ END
 
 // Entangle
 
-COPY_EXISTING ~sppr105.spl~ ~override/lk#neph2.spl~           
+COPY_EXISTING ~sppr105.spl~ ~override/lkneph2.spl~
 WRITE_SHORT 0x1C 4                        
 WRITE_LONG 0x34 1
 READ_LONG 0x64 "offset_abil"
@@ -258,7 +266,7 @@ END
 
 // Zone of Sweet Air
 
-COPY_EXISTING ~sppr318.spl~ ~override/lk#neph3.spl~           
+COPY_EXISTING ~sppr318.spl~ ~override/lkneph3.spl~           
 WRITE_SHORT 0x1C 4                        
 WRITE_LONG 0x34 1
 READ_LONG 0x64 "offset_abil"
@@ -277,7 +285,11 @@ END
 
 //Symbol
 
-COPY ~nephele/bams~ ~override~
+ACTION_IF GAME_IS ~bg2ee~ BEGIN
+COPY ~nephele/bams/ee~ ~override~
+END ELSE BEGIN
+COPY ~nephele/bams/bg2~ ~override~
+END
 COPY ~nephele/items/lk#neph.itm~ ~override/lk#neph.itm~
 SAY NAME1 @56
 SAY NAME2 @56

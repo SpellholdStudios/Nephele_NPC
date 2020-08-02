@@ -1,0 +1,74 @@
+
+
+DEFINE_ACTION_FUNCTION ee_kit_appends STR_VAR class = "CDNOTSET" kitname = "CDNOTSET" BEGIN
+
+  ACTION_FOR_EACH file IN backstab clastext clswpbon hpclass numwslot thiefskl traplimt BEGIN
+  
+    ACTION_IF FILE_EXISTS_IN_GAME ~%file%.2da~ THEN BEGIN
+  
+      ACTION_IF ((FILE_CONTAINS_EVALUATED(~%file%.2da~ ~^%class%\([ %TAB%].+\)$~)) AND NOT
+                 (FILE_CONTAINS_EVALUATED(~%file%.2da~ ~^%kitname%\([ %TAB%].+\)$~))) THEN BEGIN
+      
+        COPY_EXISTING ~%file%.2da~ ~override~
+          REPLACE_EVALUATE ~^%class%\([ %TAB%].+\)$~
+            BEGIN SPRINT "RESULT" "%MATCH1%"
+            END
+            ~%class%%RESULT%~
+        
+        APPEND ~%file%.2da~ ~%kitname%%RESULT%~
+  
+        COPY_EXISTING ~%file%.2da~ ~override~
+          PRETTY_PRINT_2DA
+      
+      END
+      
+    END
+  
+  END
+  
+  ACTION_FOR_EACH file IN clascolr clasiskl clasthac thiefscl  BEGIN
+  
+    ACTION_IF FILE_EXISTS_IN_GAME ~%file%.2da~ THEN BEGIN
+  
+      ACTION_IF ((FILE_CONTAINS_EVALUATED(~%file%.2da~ ~[ %TAB%]%class%[ %TAB%]~)) AND NOT
+                 (FILE_CONTAINS_EVALUATED(~%file%.2da~ ~[ %TAB%]%kitname%[ %TAB%]~))) THEN BEGIN
+                 
+        APPEND ~%file%.2da~ ~ ~ // add trailing newline
+      
+        COPY_EXISTING ~%file%.2da~ ~override~ // first, add column on end
+          REPLACE_TEXTUALLY ~%TAB%~ ~ ~
+          REPLACE_TEXTUALLY ~ *$~ ~~ // remove trailing spaces from lines
+          REPLACE_TEXTUALLY ~\( +[^ ]+ +[^ ]+ +\)\([^ %LNL%%MNL%%WNL%]+\)[ %LNL%%MNL%%WNL%]+$~ ~\1\2 \2~ // only grab rows with at least three entries to avoid header
+          COUNT_2DA_COLS col_num
+          COUNT_2DA_ROWS col_num row_num
+          COUNT_2DA_ROWS (col_num - 1) row_num_test
+          PATCH_IF (row_num_test != row_num) BEGIN // basically, header row doesn't have initial entry
+            SET row_num += 1
+            READ_2DA_ENTRY 0 0 (col_num - 1) temp
+            SET_2DA_ENTRY 0 0 (col_num - 1) ~CDTEMPHEADER %temp%~
+          END
+      
+        COPY_EXISTING ~%file%.2da~ ~override~ // now set values on new column
+          FOR (index = 0 ; index < col_num ; ++index) BEGIN
+            READ_2DA_ENTRY 0 index col_num header
+            PATCH_IF ("%header%" STRING_COMPARE_CASE "%class%" = 0) BEGIN
+              SET_2DA_ENTRY 0 (col_num - 1) col_num CDNEWKIT
+              FOR (index2 = 1 ; index2 < row_num ; ++index2) BEGIN // copy class values to newkit column
+                READ_2DA_ENTRY index2 index   col_num temp
+                SET_2DA_ENTRY  index2 (col_num - 1) col_num temp
+              END
+            END
+          END
+  
+        COPY_EXISTING ~%file%.2da~ ~override~
+          REPLACE_TEXTUALLY ~CDTEMPHEADER ~ ~~
+          REPLACE_TEXTUALLY ~CDNEWKIT~ ~%kitname%~
+          PRETTY_PRINT_2DA
+      
+      END
+
+    END
+  
+  END
+
+END

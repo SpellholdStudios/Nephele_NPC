@@ -5,8 +5,7 @@
 
 <div align="center"><h1>NEPHELE NPC</h1>
 
-<h3>Adding a touch of humour and hopefully a hint of originality and interest, Nephele is a new NPC for BGII: SoA and ToB--a halfling cleric of Yondalla, mother of seven and a compulsive adventurer.
-A mod hosted at Spellhold Studios for Baldur's Gate II:ToB, Baldur's Gate Trilogy, BG2:EE and EET<h3>
+<h3>A mod hosted at Spellhold Studios for Baldur's Gate II:ToB, Baldur's Gate Trilogy, BG2:EE and EET<h3>
 
 </div><br />
 
@@ -25,6 +24,7 @@ A mod hosted at Spellhold Studios for Baldur's Gate II:ToB, Baldur's Gate Trilog
 
 ## <a name="intro" id="intro"></a>Overview
 
+Adding a touch of humour and hopefully a hint of originality and interest, Nephele is a new NPC for BGII: SoA and ToB--a halfling cleric of Yondalla, mother of seven and a compulsive adventurer.
 A woman of many stories, Nephele has lived a long and sometimes dangerous life, been married, had children (and grandchildren), and dealt with her demons. Nephele has no earth-shaking quest, no troubling issues and requires no therapy. That's not to say that she won't pipe up with her opinion at every juncture, and do her best to make you into the best young man or woman you can be!
 
 I hope you enjoy playing Nephele as much as I've enjoyed writing her.

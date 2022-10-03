@@ -429,6 +429,11 @@ I_C_T SARCNT01 9 LK#N_sarcnt011
 == LK#NE25J IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @143
 END
 
+I_C_T SARCNT01 14 LK#N_sarcnt01_14
+== LK#NE25J IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @144 DO ~ActionOverride("Nephele",LeaveParty()) ActionOverride("SARCNT01",Enemy())~
+END
+
+/*
 EXTEND_BOTTOM SARCNT01 14
   IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ DO ~CreateCreatureObjectOffScreen("sargrd03",Myself(),0,0,0)
 CreateCreatureObjectOffScreen("sargrd03",Myself(),0,0,0)
@@ -462,6 +467,7 @@ LeaveParty()
 Enemy()~ EXIT
 END
 END
+*/
 
 I_C_T2 SARKIS01 36 LK#N_sarkis01
 == LK#NE25J IF ~InParty("Nephele") See("Nephele") !StateCheck("Nephele",CD_STATE_NOTVALID)~ THEN @145

@@ -5,7 +5,7 @@
 BACKUP ~nephele/backup~
 //AUTHOR ~K'aeloree (kae@spellholdstudios.net)~
 SUPPORT ~http://www.shsforums.net/forum/608-nephele/~
-VERSION ~v2.6~
+VERSION ~v2.7~
 README ~nephele/nephele_readme.html~
 
 ALWAYS
@@ -24,10 +24,10 @@ ALWAYS
       OUTER_SET EVAL ~%name_source%~ = bg2_chapter
     END
 
-    // convert strings to UTF-8 for BGEE/BG2EE
+    // convert strings from(!) UTF-8 for BGEE/BG2EE
     ACTION_DEFINE_ARRAY lk#reload BEGIN setup END
     LAF HANDLE_CHARSETS 
-	INT_VAR infer_charsets = 1 
+	INT_VAR from_utf8 = 1 infer_charsets = 1 
 	STR_VAR tra_path = ~nephele/tra~
 	reload_array = lk#reload 
     END
@@ -279,7 +279,7 @@ ACTION_IF GAME_IS ~eet~ THEN BEGIN
       override_SoA = "LK#NEPH" //name of the override NPC script in SoA
       override_ToB = "LK#NE25" //name of the override NPC script in ToB
       dialog_ToB = "LK#NE25" //name of the dialogue file used after spawning NPC in ToB
-	  SummonedVar = "LK#NepheleSummoned" // global that will be used to track if Nephele has been summoned (used by EET Fate Spirit code, also used by lk#ne25.baf to trigger initial dialogue with PC)
+	  SummonedVar = "LK#NepheleSummoned1" // global that will be used to track if Nephele has been summoned (used by EET Fate Spirit code)
 	  SpawnPlaneVar = "LK#NepheleSummoned" // global that will be used to track if Nephele has been summoned (used by EET Fate Spirit code, also used by lk#ne25.baf to trigger initial dialogue with PC)
 	  cre_ToB = "LK#NE25" // if Nephele was not in the party before ToB, this CRE will be created when she is summoned by Fate Spirit
       traFile = EVAL "nephele/tra/%LANGUAGE%/fatesp.tra" // TRA file that will be used for the TRA references defined in "string"

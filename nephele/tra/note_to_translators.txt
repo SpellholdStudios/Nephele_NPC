@@ -1,0 +1,1 @@
+Dear Translators, please note that this mod needs utf8 (without BOM) encoded tra files.
